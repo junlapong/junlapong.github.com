@@ -1,0 +1,334 @@
+<html>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass6.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+<head>
+<title>pass6</title>
+<meta charset="utf-8" />
+</head>
+
+<body bgcolor="#FFFFFF"text="#0000ff">
+<TABLE BORDER = 0 align="center">
+
+     <TR><Td width=80><A HREF="main.htm"><IMG SRC="main.jpg" Border=0></A></Td>
+         <Td width=80><A HREF="pass1.htm"><IMG SRC="pass1.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass2.htm"><IMG SRC="pass2.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass3.htm"><IMG SRC="pass3.jpg" Border=0></a></Td>
+         <Td width=80><A HREF="pass4.htm"><IMG SRC="pass4.jpg" Border=0></a></Td>
+          <Td width=80><A HREF="pass5.htm"><IMG SRC="pass5.jpg" Border=0></A></Td>
+          <Td width=80><a name="<IMG SRC="pass1.jpg"><IMG SRC="pass6.jpg" Border=0></a></Td>
+          <Td width=80><A HREF="pass7.htm"><IMG SRC="pass7.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass8.htm"><IMG SRC="pass8.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass9.htm"><IMG SRC="pass9.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass10.htm"><IMG SRC="pass10.jpg" Border=0></A></Td>
+     
+</TR>
+    </TABLE>
+<center>
+<h3><b>บทที่ 6<br>
+ประโยคคำสั่ง IF และคำสั่ง PERFORM</b></h3></center><br>
+
+<dl>
+<dt>
+<dd><IMG SRC="drosball.gif"><a href="#รูปแบบของคำสั่ง">รูปแบบของคำสั่ง</a>
+<dd><IMG SRC="drosball.gif"><a href="#ประเภทของเงื่อนไขที่ใช้ทดสอบ">ประเภทของเงื่อนไขที่ใช้ทดสอบ</a>
+<dd><IMG SRC="drosball.gif"><a href="#ความสัมพันธ์">ความสัมพันธ์</a>
+<dd><IMG SRC="drosball.gif"><a href="#คำสั่ง Nested">คำสั่ง Nested</a>
+<dd><IMG SRC="drosball.gif"><a href="#ประโยคคำสั่ง PERFORM">ประโยคคำสั่ง PERFORM</a>
+<dd><IMG SRC="drosball.gif"><a href="#คำสั่ง EXIT">คำสั่ง EXIT</a>
+</dl>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ประโยคคำสั่ง IF เป็นคำสั่งที่ใช้ทดสอบเงื่อนไขต่าง ๆ ที่เกิดขึ้น ทั้งนี้เพราะเวลามีปัญหาหรือเงื่อนไข
+ต่าง ๆ เครื่องคอมพิวเตอร์ไม่สามารถตัดสินใจเองได้ ดังนั้นเราจึงกำหนดเงื่อนไขและวางเกณฑ์การตัดสินใจ
+ให้กับคอมพิวเตอร์ว่าจะเลือกทำงานอย่างใดอย่างหนึ่ง โดยใช้ประโยคคำสั่ง IF</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ประโยคคำสั่ง IF นับว่ามีความสำคัญต่อการเขียนโปรแกรมมากเพราะช่วยให้โปรแกรมนั้นมีประสิทธิภาพ 
+ในหารทำงานมากขึ้น ในบทนี้จะขอกล่าวถึงรูปแบบต่าง ๆ ของคำสั่ง IF, ประเภทของเงื่อนไขที่ใช้ทดสอบ
+และ Nested IF</p>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>6.1 <a name="รูปแบบของคำสั่ง">รูปแบบของคำสั่ง</a> IF</b>
+</td>
+</tr>
+</table>
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบที่ 1</b>
+		IF   condition  [THEN]  { statate-1 [statement-2,..] }
+				        { NEXT SENTENCE }
+</font>
+</pre>
+คำอธิบาย
+<ul>
+<li>condition หมายถึง เงื่อนไขที่กำหนดให้เครื่องคอมพิวเตอร์ทดสอบ
+<li>statement-1, statement-2,... หมายถึง ประโยคคำสั่งต่าง ๆ ซึ่งอาจมีมากกว่า 1 คำางขึ้นไปก็ได้
+</ul>
+ผลของคำสั่ง IF
+<ol type=1>
+<li>ถ้าเงื่อนไข (condetion) เป็นจริง มีผลให้เครื่องทำงานหลัง THEN
+<ul>
+<li>ให้ THEN statement-1 เครื่องจะทำงานตามคำสั่งหลัง THEN ทุกคำสั่ง จากนั้นก็ย้ายไป
+ทำงานตามคำสั่งที่ถัดจากคำสั่ง IF
+<li>ใช้ THEN NEXT SENTENCE เครื่องจะย้ายไปทำงานตามคำสั่งถัดจากคำสั่ง IF
+</ul>
+<li>ถ้าเงื่อนไขไม่เป็นจริง ให้ไปทำคำสั่งที่อยู่ถัดจากคำสั่ง IF
+</ol>
+หมายเหตุ ประโยคคำสั่ง IF จะมีจุดที่คำสั่งสุดท้ายของประโยค IF #
+
+ 
+<pre><font face="Ms Sans Serif"><b>รูปแบบที่ 2</b>
+		IF  condition  [THEN]  { statement-1 [statement-2,...] }
+				   { NEXT SENTENCE }
+		    { OTHERWISE }      { statement-3 [statement-4,...] }
+		    { ELSE } 	   { NEXT SENTENCE }
+</font>
+</pre>
+
+ผลของคำสั่ง IF
+<ol type=1>
+<li>ถ้าเงื่อนไขเป็นจริง จะมีผลเหมือนกับประโยคคำสั่ง IF รูปแบบที่ 1 ดังที่กล่าวมาแล้ว
+<li>ถ้าเงื่อนไขไม่เป้นจริง และ
+<ul>
+<li>ใช้ OTHERWISE หรือ ELSE ตามด้วย statement ต่าง ๆ ทีความหมายว่า ถ้าเงื่อนไข
+ไม่จริง ให้เครื่องไปทำงานยังคำสั่งต่าง ๆ ที่อยู่หลัง OTHERWISE หรือ ELSE จากนั้น ก็ไปทำคำสั่งถัดจาก IF
+<li>ใช้ OTHERWISE หรือ ELSE ตามด้วย NEXT SENTENCE มึความหมายว่า ถ้า
+เงื่อนไขไม่เป็นจริง ให้เครื่องไปทำงานตามคำสั่งที่ถัดจาก IF
+</ul>
+</ol>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1><b>6.2 <a name="ประเภทของเงื่อนไขที่ใช้ทดสอบ">ประเภทของเงื่อนไขที่ใช้ทดสอบ</a></b>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จะเห็นว่าในรูปแบบของประโยคคำสั่ง IF จะมีเงื่อนไข (condition) ที่ใช้ทดสอบเพื่อให้เครื่องคอมพิวเตอร์
+ตัดสินใจว่าจะเลือกทำงานใดภายใต้เงื่อนไขอย่างหนึ่ง ๆ เงื่อนไขที่ใช้ทดสอบมีหลายประเภท แต่ในที่นี้
+จะขอกล่าวเพียง 4 แบบ คือ
+<ol type = 1>
+<li><b>Class Condition</b> เป็นเงื่อนไขที่ใช้ทดสอบประเภทของตัวแปร
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+							{ NUMERIC }	
+		identifier	   IS    [ NOT ]  
+							{ ALPHABETIC }
+</font>
+</pre>
+
+คำอธิบาย
+<ul>
+<li>identifier คือ ชื่อตัวแปรที่ต้องการทดสอบ<br>
+<li>ถ้าเลือกใช้คำว่า NUMERIC จะเป็นการทดสอบว่าตัวแปรนั้นประกอบด้วยตัวเลข 0, 1, 2, ...,9
+เท่านั้นหรือไม่ โดยตัวแปรนั้นต้องมี character string ใน picture clause เป็นชนิด X หรือชนิด 9<br>
+<li>ถ้าเลือกใช้ คำว่า ALPHABETIC เป็นการทดสอบว่าตัวแปรนั้นประกอบด้วยตัวอักษร 
+A, B, C, ...,Z หรือช่องว่าง (blank) เท่านั้นหรือไม่ โดยตัวแปรที่ใช้ทดสอบต้องมี character string เป็น
+ชนิด X หรือชนิด A<br>
+</ul>
+
+<li><b> Sign Condition</b> เป็นเงื่อนไขใช้ทดสอบค่าของตัวแปรว่ามีค่าเป็นบวก, เป็นศูนย์ หรือ มีค่าเป็นลบ
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+							{ POSITIVE }
+		identifier    IS    [ NOT ]	 { ZERO }
+							{ NEGATIVE }
+</font>
+</pre>
+
+คำอธิบาย
+<ul>
+<li>identifier คือ ตัวแปรชนิดตัวเลข
+<li>ถ้าเลือกใช้ POSITIVE เงื่อนไขจะเป็นจริงเมื่อค่าของตัวแปร มีค่าเป็นบวก หรือมีค่ามากกว่าศูนย์
+<li>ถ้าเลือกใช้ ZERO เงื่อนไขจะเป็นจริงเมื่อค่าของตัวแปร มีค่าเป็นศูนย์
+<li>ถ้าเลือกใช้ NEGATIVE เงื่อนไขจะเป็นจริง เมื่อค่าของตัวแปร มีค่าเป็นลบ หรือมีค่าน้อย กว่าศูนย์
+</ul>
+
+<li><b>Relational Condition</b> เป็นเงื่อนไขที่เกิดจากการเปรียบเทียบตัวแปร 2 ตัว หรือข้อความทางคณิตศาสตร์ 2 ประโยค
+ในเชิง มากกว่า, น้อยกว่า หรือ เท่ากัน
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+		{ identifier-1 }				{ identifier-2 }
+				relational-operator
+		{ literal-1       }				{ literal-2       }
+</font>
+</pre>
+
+คำอธิบาย
+<ul>
+<li>identofier-1, identifier-2 คือ ตัวแปร
+<li>literal-1, literal-2 คือ ค่าคงที่ซึ่งรวมทั้ง figurative constamt
+<li>relational-operator คือ เครื่องหมายความสัมพันธ์ในเชิง มากกว่า, น้อยกว่า, เท่ากับ นอกจากนี้
+เราอาจใช้คำว่า NOT นำหน้าเครื่องหมายเหล่านี้ได้
+</ul>
+</ol>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1><a name="ความสัมพันธ์"> ความสัมพันธ์ดังกล่าวสร้างขึ้นโดยใช้ relational-operator ดังนี้ </a>
+</td>
+</tr>
+</table>
+
+<pre><font face="Ms Sans Serif">
+		RELATION		                	ความหมาย
+		IS EQUAL TO			    หรือ =	   เท่ากับ
+		IS GREATER THAN	                     หรือ >	   มากกว่า
+		IS LESS THAN	                	    หรือ <	น้อยกว่า
+		IS NOT EQUAL TO		หรือ NOT =  ไม่เท่ากับ
+		IS NOT EQUAL TO		หรือ NOT > ไม่มากกว่า
+		IS NOT LESS THAN		หรือ NOT < ไม่น้อยกว่า
+
+	# หมายเหตุ ต้องมีช่องว่าง (blank) ก่อน และหลังเครื่องหมาย =, >, < 
+</font>
+</pre>
+<ul>
+<li><b>การเปรียลเทียบค่าที่เป็นตัวเลข</b>
+การเปรียบเทียบค่าของตัวแปรที่เป็นตัวเลขจะเป็นไปตามกฎของพีชคณิตโดยไม่คำนึงถึงความยาวของ
+field ที่เปรียบเทียบว่าจะแตกต่องกันหรือไม่ 
+<li><b>การเปรียบเทีนบข้อมูลที่เป็นตัวอักษร</b>
+ในการเปรียบเทียบข้อมูลทึ่เป็นตัวอักษร เครื่องจะนำ charater แต่ละคู่มาเปรียบเทียบกันโดยเรียงจาก
+ทางซ้ายไปขวา โดยที่ ช่องว่าง (blank) มีค่ารหัสตำสุด ถ้ดมาก็เป็นอักษร A, B, ... จนกระทั่งอักษร Z มีค่ารหัสสูงสุด
+</ul>
+
+<h4>Compound Condition</h4>
+	เป็นกลุ่มของเวื่อนไขตั้งแต่ 2 เงื่อนไขขึ้นไป โดยใช้คำเชื่อม NOT, AND, OR
+<pre><font face="Ms Sans Serif">
+	# การใช้ NOT	เงื่อนไขจะเป็นจริง ถ้าส่วนที่ตามหลัง NOT เป็นเท็จ
+			แต่เงื่อนไขจะเป็นเท็จ ถ้าส่วนที่ตามหลัง NOT เป้นจริง
+	# การใช้ AND	เงื่อนไขจะเป็นจริง ถ้าส่วนที่อยู่หน้าและหลัง AND เป็นจริงทั้งคู่
+			มิฉะนั้น เงื่อนไขจะเป็นเท็จ
+	# การใช้ OR	เงื่อนไขจะเป็นจริง ถ้าส่วนที่อยู่หน้าและหรือหลัง OR เป็นจริง แต่ถ้า
+			ส่วนที่อยู่หน้าและหลัง OR เป็นเท็จทั้งคู่ เงื่อนไขก็เป็นเท็จ
+</font>
+</pre>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1><b>6.3 <a name="คำสั่ง Nested">คำสั่ง Nested</a> IF</b>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เราสามารถเขียนประโยคคำสั่ง IF หลาย ๆ คำสั่งซ้อนกันได้ โดย statement ที่ตามหลัง IF หรือที่
+ตามหลัง ELSE จะเป็นประโยคคำสั่ง IF ดังรูปแบบข้างล่างนี้
+
+<pre><font face="Ms Sans Serif">
+		IF  condition-1  THEN
+				IF  condition-2  THEN   statement-2
+				ELSE
+					IF   condition-3   THEN   statement-2
+					ELSE   statement-3
+		ELSE   statement-4.
+
+	จะเห็นว่า	statement-1	จะถูกกระทำเมื่อ   condition-1   และ   condition-2   เป้นจริง
+		statement-2	จะถูกกระทำเมื่อ   condition-1   และ   condition-3   เป็นจริง
+		statement-3	จะถูกกระทำเมื่อ   condition-1   เป้นจริง
+		statement-4	จะถูกกระทำเมื่อ   condition-1   ไม่เป็นจริง
+</font>
+</pre>
+
+
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1><b>6.4 <a name="ประโยคคำสั่ง PERFORM">ประโยคคำสั่ง PERFORM</a></b>
+</td>
+</tr>
+</table>
+<ul>
+<li>คำกริยา PERFORM นับว่าเป็นคำสั่งที่มีประสิทธิภาพมากที่สุดในภาษา COBOL เนื่องจากทำให้
+เขียนโปรแกรมได้ง่ายและกะทัดรัดขึ้น นอกจากนี้ยังง่ายแก่การเปลี่ยนแปลงแก้ไขหรือเพิ่มเติมคำสั่งในโปรแกรมภายหลัง
+<li>ลักษณะการทำงานของคำสั่ง PERFORM มีผลให้เครื่องย้ายไปทำงานยัง paragraph ที่ระบุ เช่น เดียว
+กับคำสั่ง GO TO แต่คำสั่ง PERFORM มีประสิทธิภาพมากกว่า ในหัวข้อนี้ขออธิบายคำสั่ง PERFORM เพียง 3 รูปแบบดังนี้
+<pre><font face="Ms Sans Serif"><b>รูปแบบที่ 1</b>
+								 	 [ { THRU } ]
+			PERFORM   procedure-name-1	[ { THROUGH }   procedure-name-2  ]
+</font>
+</pre>
+คำอธิบาย
+<ul>
+<li>procedure-name-1, procedure-name-2 คือ ชื่อ paragraph หรือ section ที่ต้องการให้ย้ายไปทำงาน
+</ul>
+ผลการทำงาน
+<ol type=1>
+<li> ถ้าใช้เฉพาะ PERFORM proceduer-name-1 มีผลให้เครื่องย้ายไปทำงานที่ procedure-name-1 
+ตามที่ระบุ เมื่อทำคำสั่งสุดท้ายใน paragraph หรือ section นั้นเสร็จแล้ว เครื่องจะกลับไปทำคำสั่งที่อยู่ต่อจากคำสั่ง
+PERFORM นั้น ซึ่งจะเห็นว่า คุณสมบัติอันนี้ไม่มีในคำสั่ง GO TO ถ้าใช้คำสั่ง GO TO เมื่อย้ายไปทำงานยัง paragraph 
+ที่ระบุจนจบ paragraph นั้นแล้วจะไม่หลับไปทำคำสั่งที่อยู่ต่อจากคำสั่ง GO TO แต่จะทำงานยัง paragraph
+ที่อยู่ถัดลงมาเรื่อย ๆ 
+<li> ถ้าใช้ THRU procedure-name-2 ด้วย มีผลให้เครื่องย้ายไปทำงานที่ procedure-name-1 
+จนกระทั่งจบ procedure-name-2 จึงย้ายกลับไปทำคำสั่งที่อยู่ต่อจาก PERFORM นั้น 
+</ol>
+<pre><font face="Ms Sans Serif"><b>รูปแบบที่ 2</b>
+			PERFORM   procedure-name-1   [ { THRU }	procedure-name-2   ]
+						           [ { THRUOGH }           	    ]
+				   { identifier }   TIMES
+				   { integer    }
+</font>
+</pre>
+
+คำอธิบาย
+<ul>
+<li>identifier คือ ชื่อตัวแปร ซึ่งมีค่าเป็นเลขจำนวนเต็มมากกว่าหรือเท่ากับ 1
+<li>integer คือ เลขจำนวนเต็มมากกว่าหรือเท่ากับ 1
+</ul>
+ผลการทำงาน
+<ul>
+<li>คำสั่ง PERFORM รูปแบบนี้ มีความหมายให้เครื่องย้ายไปทำงาน ยัง procedure-name-1 จนกระทั่ง
+จบ procedure-name-2 (ถ้ามี) เป็นจำนวนกี่รอบก็ได้ตามต้องการโดยขึ้นอยู่กับ identifier (ว่ามีค่าอยู่เท่าไร)
+หรือ integer (ที่เรากำหนด)
+<li>ในการย้อนกลับมาทำแต่ละรอบเครื่องจะตรวจสอบว่าครบจำนวนครั้งที่ระบุไว้หรือไม่ ก่อนที่จะย้าย
+ไปทำงานยัง procedure-name-1 จนถึง procedure-name-2 (ถ้ามี) ถ้าครบตามจำนวนที่ระบุก็ย้อนกลับไปทำงาน
+ตามคำสั่งที่อยู่ถัดจาก PERFORM นั้น
+</ul>
+<pre><font face="Ms Sans Serif"><b>รูปแบบที่ 3</b>
+			PERFORM   procedure-name-1   [ { THRU        }   procedure-name-2 ]
+						           [ { THROUGH }                                  ]
+				   	  UNTIL   condition
+</font>
+</pre>
+
+คำอธิบาย
+<ul>
+<li>condition คือ เงื่อนไขที่ใช้ทดสอบการสิ้นสุดการทำงานของคำสั่ง PERFORM
+</ul>
+ผลการทำงาน
+<ul>
+<li>คำสั่ง PERFORM แบบนี้ มีหลักการทำงานว่าก่อนที่เครื่องจะย้ายไปทำงานยัง procedure-name-1
+จนถึง procedure-name-2 (ถ้ามี) เครื่องจะตรวจสอบเงื่อนไข (condition) ว่าเป็นจริงหรือเท็จ ถ้าเป็นจริง
+เครื่องจะทำคำสั่งที่อยู่ถัดจาก PERFORM ทันที แต่ถ้าเงื่อนไขนั้นเป็นเท็จเครื่องจะไปทำงาน ยัง paragraph 
+ที่ระบุเมื่อทำเสร็จก็จะกลับมาที่คำสั่ง PERFORM อีกครั้ง เพื่อทดสอบว่าเงื่อนไขนั้นเป็นจริงหรือเท็จ ถ้ายังเป็น
+เท็จอยู่ก็จะกลับไปทำงานยัง paragraph นั้น ทำเช่นนี้เรื่อย ๆ จนกระทั่งเงื่อนไปเป็นจริง
+</ul>
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1><b>6.5 <a name="คำสั่ง EXIT">คำสั่ง EXIT</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นคำกริยาคำหนึ่งในภาษาโคบอล ทำหน้าที่เป็นจุดสิ้นสุด, จุดออกหรือจุดกลับเท่านั้น ไม่ได้เป็นคำสั่ง
+ที่ก่อให้การประมวลข้อมูลหรือการคำนวณแต่อย่างใด คำกริยา EXIT เมื่อใช้ต้องเป็นคำ ๆ เดียวใน paragraph 
+และ paragraph นั้นถูก PERFORM
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+			paragraph-name.   EXIT.
+</font>
+</pre>
+
+คำอธิบาย
+<ul>
+<li>paragraph-name คือ ชื่อ paragraph
+</ul>
+</body>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass6.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+</html>

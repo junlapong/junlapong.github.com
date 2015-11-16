@@ -1,0 +1,90 @@
+<html>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass7.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+<head>
+<title>pass7</title>
+<meta charset="utf-8" />
+</head>
+<body bgcolor="#FFFFFF" text="#0000ff">
+<TABLE BORDER = 0 align="center">
+
+     <TR><Td width=80><A HREF="main.htm"><IMG SRC="main.jpg" Border=0></A></Td>
+         <Td width=80><A HREF="pass1.htm"><IMG SRC="pass1.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass2.htm"><IMG SRC="pass2.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass3.htm"><IMG SRC="pass3.jpg" Border=0></a></Td>
+         <Td width=80><A HREF="pass4.htm"><IMG SRC="pass4.jpg" Border=0></a></Td>
+          <Td width=80><A HREF="pass5.htm"><IMG SRC="pass5.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass6.htm"><IMG SRC="pass6.jpg" Border=0></A></Td>
+          <Td width=80><a name="<IMG SRC="pass1.jpg"><IMG SRC="pass7.jpg" Border=0></a></Td>
+          <Td width=80><A HREF="pass8.htm"><IMG SRC="pass8.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass9.htm"><IMG SRC="pass9.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass10.htm"><IMG SRC="pass10.jpg" Border=0></A></Td>
+     
+</TR>
+    </TABLE>
+<center><h3>บทที่ 7<br>SORTING AND MERGE</h3>
+</center>
+<dl>
+<dt>
+<dd><IMG SRC="drosball.gif"><a href="#การจัดเรียงลำดับข้อมูล (Sorting)">การจัดเรียงลำดับข้อมูล (Sorting)</a>
+<dd><IMG SRC="drosball.gif"><a href="#MERGE Statement">MERGE Statement</a>
+</dl>
+
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>1. <a name="การจัดเรียงลำดับข้อมูล (Sorting)">การจัดเรียงลำดับข้อมูล (Sorting)</a>
+</b>
+</td>
+</tr>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การจัดเรียงลำดับข้อมูลนับว่าเป็นกระบวนการที่มีความสำคัญอยู่ไม่น้อย ในการเก็บข้อมูลภายใน Data File มีการจัดเรียงข้อมูล ภายใน File ให้อยู่ในลักษณะที่สามารถใช้งานได้สะดวก ซึ่งลักษณะข้อมูลที่เก็บอยู่ภายในเทป (Tape) หรือดิสค์ (Disk) จึงมักจะมีการจัดเรียง ลำดับกันในลักษณะที่ Index แล้วใช้ Code ภายในแต่ละ Record เป็นกุญแจเพื่อสามารถที่เข้าถึงข้อมูลที่เก็บอยู่ภายในแต่ละ Record แต่ละField โดยไม่ผิดพลาด เช่น อาจจะใช้หมายเลขรหัสประจำตัว หรือรหัสแผนก เป็นต้น ซึ่งการเรียงลำดับตาม key item นี้ โดยมากจะเรียง
+จากมากไปหาน้อย (Ascending form) ในกรณีที่เก็บข้อมูลใน Diskette วิธีการเก็บ และการประมวลผลข้อมูลก็จะเป็นแบบชนิด Index -Sequential File</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การจัดเรียงข้อมูลในภาษาโคบอล สามารถทำได้ 2 วิธีคือ การ SORT และการ MERGE ซึ่งได้กำหนดการใช้ในรูปของคำสั่ง   ใน
+การจัดเรียงข้อมูลจะต้องมีแฟ้มข้อมูลอย่างน้อย 3 ประเภทคือ</p>
+<ul type = 1>
+<li>แฟ้มข้อมูลที่เป็น Input file
+<li>แฟ้มที่ใช้เตรียมข้อมูลสำหรับการทำงาน (work area)
+<li>แฟ้มข้อมูลที่ใช้เก็บข้อมูลที่ได้ผ่านการจัดเรียงแล้ว (Output data file)
+</ul>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ซึ่ง Input file จะทำหน้าที่ในการเก็บข้อมูลต่าง ๆ ที่จะนำเข้ามาทำการ Sort  โดยส่งเข้าสู่โปรแกรม Sort เมื่อโปรแกรม Sort ได้ทำการจัดเรียงลำดับข้อมูลแล้วก็จะส่งข้อมูลที่ทำการจัดเรียง (Record Key) แล้วไปเก็บไว้ในแฟ้มที่เตรียมไว้ (Output file) สำหรับการใช้งานในขั้นตอนต่อไป และอาจจะแสดงการจัดเรียงลำดับข้อมูลออกทาง Print out เพื่อใช้ตรวจสอบความถูกต้องของการจัดเรียงข้อมูลด้วย
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<h4>ในภาษาโคบอล สำหรับการ Sort อาจจะพิจารณา ดังนี้</h4>
+<ul>
+<li>ใน ENVIRONMENT DIVISION.
+<ul>
+<li>จะต้องอธิบาย Sort File ที่จะใช้เป็น Work Area
+</ul>
+<li>ใน DATA DIVISION.
+<ul>
+<li>ต้องอธิบายลักษณะของแฟ้มข้อมูลที่ใช้เป็น Work Area โดยจะใช้คำขึ้นต้นว่า SD แทน FD ซึ่งย่อมาจาก Sort File Description
+</ul>
+<ul>
+<li>ใน PROCEDURE DIVISION.
+</ul>
+<ul>
+<li>จะต้องกำหนดประเภทของการจัดเรียงข้อมูล
+</ul>
+</ul>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>2. <a name="MERGE Statement">MERGE Statement.</a>
+</b>
+</td>
+</tr>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในกรณีที่ต้องการจัดเรียงข้อมูลตั้งแต่ 2 แฟ้มขึ้นไป แล้วนำข้อมูลที่ทำการจัดเรียงแล้วทั้งหมดไปไว้ในแฟ้มข้อมูลใหม่ที่เตรียมขึ้น 
+โดยจัดเรียง Record ตามที่กำหนดไว้ เช่น มีข้อมูล 2 แฟ้ม ต้องการรวมข้อมูลทั้งสองแฟ้มเข้าด้วยกัน ในขั้นตอนแรกจะต้องทำการ Sort แฟ้มข้อมูลในแต่ละแฟ้มให้มีการจัดเรียงข้อมูลในลักษณะเดียวกันเสียก่อน แล้วในขั้นต่อไปก็นำแฟ้มทั้ง 2 มาจัดรวมเข้าเป็นแฟ้มข้อมูลเดียวกัน</p>
+
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+</body>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass7.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+</html>

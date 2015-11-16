@@ -1,0 +1,85 @@
+<html>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass10.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+<head>
+<title>pass10</title>
+<meta charset="utf-8" />
+</head>
+<body bgcolor="#FFFFFF" text="#0000ff">
+<TABLE BORDER = 0 align="center">
+
+     <TR><Td width=80><A HREF="main.htm"><IMG SRC="main.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass1.htm"><IMG SRC="pass1.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass2.htm"><IMG SRC="pass2.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass3.htm"><IMG SRC="pass3.jpg" Border=0></a></Td>
+         <Td width=80><A HREF="pass4.htm"><IMG SRC="pass4.jpg" Border=0></a></Td>
+          <Td width=80><A HREF="pass5.htm"><IMG SRC="pass5.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass6.htm"><IMG SRC="pass6.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass7.htm"><IMG SRC="pass7.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass8.htm"><IMG SRC="pass8.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass9.htm"><IMG SRC="pass9.jpg" Border=0></A></Td>
+          <Td width=80><a name="<IMG SRC="pass1.jpg"><IMG SRC="pass10.jpg" Border=0></a></Td>
+     
+</TR>
+    </TABLE>
+<center>
+<h3><b>บทที่ 10<br>
+การคอมไพล์ (compiling)การ RUN โปรแกรมและEDITOR</b></h3>
+</center>
+
+<dl>
+<dt>
+<dd><IMG SRC="drosball.gif"><a href="#การคอมไพล์ (compiling)การ RUN โปรแกรม">การคอมไพล์ (compiling)การ RUN โปรแกรม</a>
+<dd><IMG SRC="drosball.gif"><a href="#EDITOR กับการเขียนโปรแกรม">EDITOR กับการเขียนโปรแกรม</a>
+</dl>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="การคอมไพล์ (compiling)การ RUN โปรแกรม">การคอมไพล์และการ RUN โปรแกรม</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จากที่ได้กล่าวมาแล้วว่า ภาษาโคบอลนั้นจริง ๆ แล้วไม่เหมาะที่จะใช้กับเครื่องระดับไมโครคอมพิวเตอร์ เนื่องจาก เครื่องไมโคร
+คอมพิวเตอร์มีขีดความสามารถที่จำกัดในเรื่องของหน่วยความจำ ถ้าหากโปรแกรมที่มีขนาดใหญ่มากจะมีปัญหาต่าง ๆ ที่ยุ่งยากตามมา แต่ก็มี
+Software ที่ถูกสร้างขึ้นโดยบริษัท Microsoft เป็นตัว Compile ที่ใช้สำหรับเครื่องไมโครคอมพิวเตอร์ ซึ่งในขณะนี้บริษัท Microsoft ได้
+พัฒนาตัว COBOL Compiler ขึ้นเป็น Version 3.0 แล้ว แต่ตามตัวอย่างนี้ใช้ COBOL Compiler Version 2.2 อยู่ และโปรแกรมตัวอย่าง
+บางโปรแกรมในตำราเล่มนี้ สามารถ Compileด้วย COBOL Compiler Version 2.0 ขึ้นไป ซึ่งขั้นตอนการ Compile และการ RUN ไม่
+แตกต่างไปกว่ากันมากนัก และมีขั้นตอนดังนี้
+<ol type=1>
+<li>สร้าง Source Program ลงในแผ่น Diskette หรือ Floppy Disk
+<li>สร้างแฟ้มข้อมูลเพื่อเก็บข้อมูลเป็น Input Data ของโปรแกรมนี้ลงใน Diskette  หรือ Floppy Disk เช่นเดียวกัน โดยตั้งชื่อ
+แฟ้มข้อมูลให้ตรงกับ Value of File-ID Clause ใน DATA DIVISION ของ Source Program ในข้อ 1
+<li>เรียก COBOL Compiler มาใช้
+</ol>
+<center><a href="#<img src="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="#EDITOR กับการเขียนโปรแกรม">EDITOR กับการเขียนโปรแกรม</a></b>
+</font>
+</td>
+</tr>
+</table>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Editor ในความหมายที่เป็นภาษาไทยว่า "ตัวบรรณาธิกรณ์" ในที่นี้ผู้เขียนเรียกว่า "Editor" ดีกว่า   Editor คือตัวที่ใช้แทนกระดาษ
+ทด กระดาษเขียน หรือจะเรียกว่าเป็นสมุดจดก็ว่าได้ หรือให้ความหมายได้เช่นเดียวกัน หรือที่เราใช้แทนกระดาษเขียนโปรแกรมนั้นเอง Editor เป็น
+ตัวที่ทำการประมวลผลกลุ่มตัวอักขระต่าง ๆ ซึ่งใช้พิมพ์จดหมาย พิมพ์รายงาน และเอามาเขียน หรือสร้าง Source Program หรือที่เรารู้จักกัน
+ในชื่อของ Word Processor เป็นที่น่าแปลกว่า มีผู้คนทั่วไปที่เกี่ยวข้องกันในทางคณิตศาสตร์ โดยเฉพาะไมโครคอมพิวเตอร์มักจะรู้จักหรือได้
+ยินคำว่า "Word Processor" แต่ไม่มีใคร หรือน้อยคนนักที่จะรู้จักหรือได้ยินคำว่า "Editor" Software ที่เป็นประเภท Word Processor นั้น
+ในระดับไมโครคอมพิวเตอร์เป็นที่รู้จักกันดีก็คือ Wordstar , Word ราชวิถี เป็นต้น ส่วนที่นักศึกษาคอมพิวเตอร์รู้จักกันและใช้กันอยู่เสมอก็คือ
+TURBO PASCAL, TURBO-C, SIDEKICK เป็นต้น<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับผู้เขียนใช้ SideKick เป็นตัวเขียนโปรแกรมในภาษาต่าง ๆ หลายภาษาที่ใช้แยกในการคอมไพล์ เพราะง่ายและสะดวกมาก ใน
+การออกจากโปรแกรมและเข้าโปรแกรม ในที่นี้ผู้เขียนจะกล่าวถึงวิธีการใช้ Editor Sidekick เพื่อเป็นแนวทางในการใช้ใช้ทำโปรแกรม หรือ
+สำหรับผู้ที่มีความถนัดในการใช้ Editor ตัวอื่นก็ขอให้ใช้ Editor ตัวที่ถนัดไปก็แล้วกัน หรือจะอ่านไว้เพื่อประดับความรู้ของผู้อ่านเองก็เป็นสิ่ง
+ที่ดี สำหรับ Sidekick ทางผู้เขียนเองจะขอกล่าวไว้เท่าที่จำเป็นในการเขียนโปรแกรมเท่านั้น ถ้าหากว่าผู้อ่านต้องการที่จะศึกษา ค้นคว้าไปมากกว่า
+นี้ก็สามารถหาซื้อคู่มือการใช้ได้ตามท้องตลาด หรือร้านขายหนังสือทั่ว ๆ ไป
+<center><a href="#<img src="top.gif"><IMG SRC="top.gif"></a></center>
+</body>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass10.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+</html>

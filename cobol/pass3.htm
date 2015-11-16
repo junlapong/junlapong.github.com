@@ -1,0 +1,82 @@
+<HTML>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass3.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+<HEAD>
+<TITLE>pass3</TITLE>
+<meta charset="utf-8" />
+</HEAD>
+<BODY bgcolor="#ffffff"text="#0000ff">
+<TABLE BORDER = 0 align="center">
+
+     <TR><Td width=80><A HREF="main.htm"><IMG SRC="main.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass1.htm"><IMG SRC="pass1.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass2.htm"><IMG SRC="pass2.jpg" Border=0></A></Td>
+          <Td width=80><a name="<IMG SRC="pass1.jpg"><IMG SRC="pass3.jpg" Border=0></a></Td>
+         <Td width=80><A HREF="pass4.htm"><IMG SRC="pass4.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass5.htm"><IMG SRC="pass5.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass6.htm"><IMG SRC="pass6.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass7.htm"><IMG SRC="pass7.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass8.htm"><IMG SRC="pass8.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass9.htm"><IMG SRC="pass9.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass10.htm"><IMG SRC="pass10.jpg" Border=0></A></Td>
+     
+</TR>
+    </TABLE>
+<center><h3><b>บทที่3<br>Identification Division</b></h3></center>
+
+<dl>
+<dt>
+<dd><IMG SRC="drosball.gif"><a href="#Identification Division">Identification Division</a>
+<dd><IMG SRC="drosball.gif"><a href="#Environment Division">Environment Division</a>
+</dl>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="Identification Division">Identification Division</a>
+</b>
+</font>
+</td>
+</tr>
+</table>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นส่วนหนึ่งหรือเป็นส่วนแรกเริ่มของโปรแกรมภาษาโคบอล ซึ่งจะต้องมีเสมอ สำหรับภายในรายละเอียดของ Division นี้จะมีหรือไม่มีก็ได้ เมื่อเริ่มต้นเขียนโปรแกรม โปรแกรมเมอร์จะต้องเขียนชื่อ Division นี้ก่อนเสมอและจะเริ่มต้นที่ Area A เสมอ<br>
+<p>ใน Division จะมีสองระดับ คือ ส่วนที่เป็น Division คือ Identification Division และส่วนที่เป็น Paragraph ดังนี้คือ</p>
+<ul>
+<li>Program-Id Paragraph ที่จะต้องเขียนในทุก ๆ โปรแกรมเพื่อเป็นการบอกให้ Operating System รู้ว่าขณะนี้กำลังทำโปรแกรมอะไรอยู่เพื่อประโยชน์ในการติดตาม และ ควบคุมการทำงานของโปรแกรมนี้ตลอดทุกขั้นตอน โดยจะต้องตั้งชื่อโปรแกรม (Program ID ) ตามหลักเกณฑ์
+<li>Author Paragraph เป็น Paragraph ที่มีไว้เพื่อใช้ระบุวื่อโปรแกรมเมอร์ ที่เขียนโปรแกรมนี้ และเป็นประโยชน์ในการติดต่อประสานงานร่วมกันเป็นทีม
+<li>Installation Paragraph เป็น Paragraph ที่ใช้อ้างอิงหรือเป็นหลักฐานระบุหน่วยงานที่รับผิดชอบ หรือที่เกี่ยวข้อง หรือชื่อหน่วยงานที่จัดทำโปรแกรมนี้ขึ้นมา
+<li>Date-Written  Paragraph เป็น Paragraph ที่ระบุถึงวันที่ทำโปรแกรมนี้ขึ้น
+<li>Date-Compiled Paragraph เป็น Paragraph ที่ใช้ในการระบุถึงวันที่ทำการ Compile ซึ่งหลังจากที่ทำการ Compiler จะใส่วันทีที่ทำการ Compile ให้เอง
+<li>Security Paragraph เป็น Paragraph ที่ใช้แสดงรหัสผ่านสำหรับผู้ที่มีสิทธิ์ใช้โปรแกรมนี้เท่านั้น จุดมุ่งหมายของโปรแกรมนี้อาจจะต้องการรักษาความลับหรือความปลอดภัยของโปรแกรม ซึ่ง Paragraph นี้จะอธิบายให้ผู้ใช้ หรือผู้อ่านได้ทราบต่อไป
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="Environment Division">Identification Division</a>
+</b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เป็น Division ที่สองของโปรแกรม ในบางระบบเราอาจจะละไม่ใส่ Division นี้ก็ได้ หรืออาจจะใส่เฉพาะขื่อของ Division นี้เท่านั้นก็ได้ ถ้าหากว่าโปรแกรมนี้ไม่มีการใช้แฟ้มข้อมูลที่เป็น Input Output เลย Environment Division ประกอบด้วย 2 Section ด้วยกัน
+<ul>
+<li>Configuration Section เป็นส่วนที่ใช้เขียน หรือระบุรายละเอียดของเครื่องคอมพิวเตอร์ที่จะใช้ในการ Compile และการปฏิบัติงาน(Execute) ตามคำสั่งในโปรแกรม โปรแกรมเมอร์อาจจะละเว้นไม่เขียนเอาไวัภายในโปรแกรมก็ได้ เพราะโดยทั่วไปโปรแกรมที่ถูกสร้างขึ้นจะถูกนำมาทดสอบ และสังทำงานทันทีอย่างต่อเนื่องภายในเครื่องเดียวกันดังนั้นภายใน Section นี้มีไว้เพียงเพื่อใช้เป็นประโยชน์ในการอ้างอิง ซึ่งใน Section นี้จะประกอบไปด้วย 2 Paragraph
+<ul>
+<li>Source-Computer ระบุถึงเครื่องคอมพิวเตอร์ที่ใช้ในการเขียนโปรแกรมขึ้นมาและทำการ Compile ให้เป็น Code Program ชนิด Object Code
+<li>Object-Computer เป็นการระบุถึงเครื่องคอมพิวเตอร์ที่ใช้กับ Object Program โดยส่วนใหญ่จะใช้เครื่องคอมพิวเตอร์ที่เป็นชนิดเดียวกันกับเครื่องคอมพิวเตอร์ที่ใช้ในการแปลเป็น Object Code หรือใช้เครื่องฯ เดียวกันนั่นเอง
+</ul>
+<li>Input-Output Section ในส่วนนี้โปรแกรมเมอร์จะต้องเขียนในกรณีที่มีการเรียกแฟ้มข้อมูลเข้ามาใช้ หรือในกรณีที่มีการส่งผลลัพธ์ที่ได้จากการทำงานของโปรแกรมไปเก็บไว้ในแฟ้มที่สำหรับเก็บผลลัพธ์ หรือมีการสร้างแฟ้มข้อมูลชั่วคราวขึ้นมาใช้ในการทดสอบโปรแกรมต่อถ้าไม่มีการใช้แฟ้มข้อมูลในส่วนของ Section นี้ก็ไม่ต้องระบุใน Section นี้ยังสามารถแยกออกไปได้อีก 2 Paragraph ดังนี้
+<ul>
+<li>File-Control Paragraph 
+<li>I-O-Control Paragraph
+</ul>
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+</BODY>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass3.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+</HTML>

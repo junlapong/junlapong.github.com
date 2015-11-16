@@ -1,0 +1,399 @@
+<html>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass4.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+<head>
+<title>pass4</title>
+<meta charset="utf-8" />
+</head>
+<body bgcolor="#FFFFFF"text="#0000ff">
+<TABLE BORDER = 0 align="center">
+     <TR><Td width=80><A HREF="main.htm"><IMG SRC="main.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass1.htm"><IMG SRC="pass1.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass2.htm"><IMG SRC="pass2.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass3.htm"><IMG SRC="pass3.jpg" Border=0></a></Td>
+         <Td width=80><a name="<IMG SRC="pass1.jpg"><IMG SRC="pass4.jpg" Border=0></a></Td>
+          <Td width=80><A HREF="pass5.htm"><IMG SRC="pass5.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass6.htm"><IMG SRC="pass6.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass7.htm"><IMG SRC="pass7.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass8.htm"><IMG SRC="pass8.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass9.htm"><IMG SRC="pass9.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass10.htm"><IMG SRC="pass10.jpg" Border=0></A></Td>
+     
+</TR>
+    </TABLE>
+<center>
+<h3><b>บทที่ 4<br>
+DATA DIVISION</b></h3>
+</center>
+<dl>
+<dt>
+<dd><IMG SRC="drosball.gif"><a href="#โครงสร้าง">โครงสร้าง</a><br>
+<dd><IMG SRC="drosball.gif"><a href="#FILE SECTION">FILE SECTION</a><br>
+<dd><IMG SRC="drosball.gif"><a href="#WORKING-STORAGE SECTION"> WORKING-STORAGE SECTION</a><br>
+<dd><IMG SRC="drosball.gif"><a href="#LINKAGE SECTION">LINKAGE SECTION</A><br>
+<dd><IMG SRC="drosball.gif"><A HREF="#SCREEN SECTION"> SCREEN SECTION</A><br>
+<dd><IMG SRC="drosball.gif"><A HREF="#คำสั่งที่ใช้ใน SCREEN SECTION">คำสั่งที่ใช้ใน SCREEN SECTION</A><br>
+</dl>
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="โครงสร้าง">โครงสร้าง</a> ของ DATA DIVISION.</b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ใน Division นี้จะกำหนด รูปร่างหน้าตา หรือรายละเอีนดที่เกี่ยวกับแฟ้มข้อมูบที่เรียกเข้ามาใช้ภายในโปรแกรม 
+หรือแฟ้มข้อมูลที่จะเป็นตัวเก็บ หรือบันทึกผลลัพธ์ที่เกิดจากการทำงานของโปรแกรม ตลอดจนกำหนดถึง
+รายละเอียดของรายการหลัก (record) และรายการย่อย (Field Or Data Item) ซึ่งเป็นการสั่งเตรียม
+เนื่อที่ภายในหน่วยความจำ หรือ พื้นที่ของการใช้งานภายในโปรแกรมนั้น ๆ ก่อนที่จะนำข้อมูลเข้าไปประมวลผล
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+		DATA   DIVISION.
+		FILE    SECTION.
+			[ File   Description   Entry               ]
+			[			        		    ]
+			[ { Record   Description   Entry } ...  ]
+
+		WORKING-STORAGE   SECTION.
+			[ Data  Item   Description   Entry ]
+			[			     		       ]
+			[ Record   Description   Entry      ] ...
+		LINKAGE   SECTION.
+			[ Data   Item   Description   Entry ]
+			[			 		     ... ]
+			[ Record   Description   Entry	     ]
+		SCREEM   SECTION.
+			[ Report   Group   Descrip   Entry               ]
+			[			                  		      ]
+			[ { Report   Group   Description   Entry } ... ]
+</font>
+</pre>
+
+จากทั้ง 4 Section นี้เราจะเลือกใช้เฉพาะส่วนที่จำเป็นในการเขียนโปรแกรมนั้น ๆ เท่านั้น
+<ol type=1>
+<li>FILE SECTION. อธิบายโครงสร้างของ แฟ้มข้อมูล และ ส่วนประกอบภายใน FILE ได้แก่ 
+RECORD, FIELD รวมถึงรายละเอียดที่เกี่ยวกับขนาด และลักษณะของแฟ้มข้อมูล
+<li> WORKING-STORAGE SECTION. อธิบายข้อมูลที่ไม่ได้จัดไว้ภายใน FILEที่มีอยู่ใน 
+FILE SECTION แต่เป็นข้อมูลที่สร้างขึ้นมาเพื่อช่วยการทำงานของโปรแกรม 
+เช่น ผลลัพธ์ที่ได้จากการคำนวณ
+<li>LINKAGE SECTION. อธิบายข้อมูลที่มีการส่งค่ากันระหว่างโปรแกรมหนึ่งไปยังอีกโปรแกรมหนึ่ง 
+หรือระหว่างโปรแกรมย่อย (Sub Program Or Sub Routine)
+<li> SCREEN SECTION. อธิบายข้อมูล หรือ การกำหนดสิ่งที่เราต้องการให้มาปรากฏบนจอภาพ 
+หรือ เพื่อให้แสดงข้อมูลที่ต้องการ หรือ ค่าที่ KEY เข้าไปประมวลผล แล้วแสดงผลออกมาทางจอภาพ 
+โดยทั่วไปจะใช้กับเครื่องไมโครคอมพิวเตอร์
+</ol>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><A NAME="FILE SECTION">1.FILE SECTION</A></b>
+</font>
+</td>
+</tr>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  เป็นส่วนที่ใช้เขียนคำสั่งต่าง ๆ ที่แสดงรายละเอียดเพิ่มเติมเกี่ยวกับแฟ้มข้อมูล 
+(File Name) ซึ่งต้องกำหนดไว้ในคำสั่ง SECTION ภายใน FILE-CONTROL ซึ่งการเขียน
+คำสั่งนี้จะเริ่มจาก FD ในกรณีที่ไม่มีการเรียกใช้แฟ้มข้อมูลเข้ามาประมวลผลก็จะไม่ใส่ 
+SECTION นี้ไว้ และไม่มี SELECT ภายใน FILE-CONTROL นี้ด้วย</p>
+
+รายการข้อมูลภายใน FILE SECTION นี้สามารถแบ่งออกเป็น 2 ประเภทดังนี้คือ<br>
+<ol type=1>
+<li>File Description Entry<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เป็นการอธิบายลักษณะทาง Physical ของแฟ้มข้อมูลแต่ละชุด (File Description Entry) 
+ซึ่งจะทำให้ Ohject Program สามารถแปลความหมายหรือสร้างแฟ้มข้อมูลได้อย่างถูกต้อง<br>
+
+<pre><font face="Ms Sans Serif"><b>โครงสร้างของ FILE SECTION.</b>
+
+		FD   file-name
+		OR
+			
+			                  [				      [ [ BINARY  ] ]   [ [ LOW      ] 	                     ] ]
+		FD   file-name-1   [ RECORD   MODE   IS  [ [	    	    ] ]   [ [ HIGH     ]   DENSITY     ] ]
+			                  [ 			 	      [ [ DECIMAL] ]   [ [ HYPER  ]                       ] ]
+
+				[ RECORDS ]   [ ARE ]   [ STANDARD ]
+		LABLE     [ RECORD   ]   [  IS    ]   [ OMITTED    ]
+
+		[ VALUE   OF   FILE-ID   IS   { data-name-1 } ]
+				          		    { literal-1         } 
+
+							         [ CHARACTERS ]
+		[ BLOCK   CONTAINS   integer   [ RECORDS        ]   ]
+</font>
+</pre>
+<ul>
+<li>FD เป็น Recording Mode Clause คำขึ้นต้นอธิบายลักษณะของ FILE ย่อมา จาก 
+FILE DESCRIPTION. (File Description Entry)
+<li>file name or file-name-1 เป็นชื่อ File ที่ตั้งขึ้นตรงกับที่ SELECT Entry ไว้ใน 
+ENVIRONMENT DIVISION.
+<li>LABEL Record Clause ใน Clause นี้จะต้องเขียนเสมอ Label Record อาจจะเป็น 
+Record แรก หรือจะเป็น Record สุดท้ายภายในแฟ้มข้อมูลก็ได้
+<li>BLOCK CONTAINS (BLOCK Contains Clause) ใช้กับแฟ้มข้อมูลที่เป็นเทปแม่เหล๊ก
+ซึ่งมีการจัดข้อมูล และ บอกขนาดของ Physical Record. ให้มีตั้งแต่ 1 Record ขึ้นไป
+ถ้าหากว่าไม่มีการเขียน หรือระบุ Clause ลงไป หมายความว่าหนึ่ง Block จะประกอบไปด้วยหนึ่ง Logical Record
+<li>RECORD CONTAINS Clause เป็นตัวบอกว่าในหนึ่ง Logical Records นั้นมีกี่ตัวอักขระ
+<li>RECORDING MODE Clause ใช้กำหนดลักษณะการบันทึกข้อมูลในแต่ละ RECORD ของ file
+<li>DATA (DATA Record Clause) ทำหน้าที่ระบุชื่อของ Buffer ที่จะทำการเก็บข้อมูล 
+หรือ Record ที่จะเรียกเข้ามาใช้ภายในโปรแกรม หรือส่งข้อมูลออกจาก Main Memory
+<li>data-name-1, data-name-2, ... เป็นชื่อ Record ในแฟ้มข้อมูลนั้น ๆ จะเรียงอันดับของ 
+Record Record ไหนก่อน หรือหลังก็ได้ Record ที่อ้างถึงนี้จะถูกนำไปอธิบายถึงรายละเอียดอีกครั้ง 
+โดยใช้เลขบอกระดับ 01 ใน Record Description Entry ต่อไป 
+</ul>
+	
+
+
+<li> Record Description Entry<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Record Description Entry ใช้สำหรับอธิบายลักษณะของข้อมูลแต่ละตัวที่เก็บอยู่
+ภายในหน่วยความจำ ว่ามีลักษณะอย่างไร (Data Description Entry) ซึ่ง Item แต่ละตัวต้องอธิบาย
+แยกกันคนละบรรทัด<br>
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+				      [ data-name ]
+		level number	[	         ]	[ REDEFINES ... ] [ OCCURS ... ] [ PICTURE ... ]
+				      [ FILLER    ]
+			
+					   	 	[ Edit Clause ... ] [ VALUE ... ] [ SIZE ... ]
+					    	 	[ CLASS ... ] [ USAGE ... ] [ JUSTIFIED ... ]
+					    	 	[ BLANK   WHEN   ZERO   clause ]
+</font>
+</pre>
+
+<ul>
+<li>Level Number (เลขระดับข้อมูล) ภายใน Record Description Entry ทุกชุดจะ
+ต้องมีเลขขอกระดับข้อมูลซึ่งประกอบไปด้วยเลขสองหลักเสมอ ให้เขียนที่ Column 8 หรือทาง
+ขวามือของ Column 8 ก็ได้ ในกรณีที่เป็นตัวเลขหนึ่งหลัก เราจะใส่เลขศูนย์ หรือ Blank Space 
+ข้างหน้าของตัวเลข เพื่อทำให้อยู่ในรูปของเลขสองหลักเสมอ data-name และ level number 
+ต้องเขียนไว้ในบรรทัดเดียวกัน โดยเว้นว่างไว้อย่างน้อย 1 Blank
+<li>data-name คือชื่อข้อมูล
+<li>FILLER จะใช้กับเขตของข้อมูล ที่ไม่สนใจนำมาประมวลผล โดยใช้กับข้อมูลเดี่ยวหรือกลุ่ม
+ของขัอมูลก็ได้
+<li>REDEFINES clause. การกำหนดค่าคงที่ ในตารางที่มีขนาดไม่ใหญ่นัก แทนที่จะอ่านค่าเข้ามาใช้ในตาราง
+สามารถใช้ REDEFINER clause ช่วยกำหนดเนื้อที่ได้ซึ่งใช้สำหรับกำหนดให้ Items สองตัว 
+ซึ่งจะใช้เนื่อที่ที่เดียวกันในหน่วยความจำ หรือจะใช้กำหนดเนื้อที่ข้อมูล ในเนื่อที่เดียวกัน 
+ให้สามารถเรียกใช้ข้อมูลตามลักษณะที่ต้องการ หรือกำหนดข้อมูลรายการหนึ่งรายการใดที่มีหลายชื่อ 
+และหลายรูปแบบ
+<li>OCCURS clause. ในการเรียกใช้ ตัวแปร บางครั้งตัวแปรอาขมีลักษณะเหมือนกัน จึงจำเป็นต้องสร้างตาราง
+เพื่อเก็บข้อมูลเหล่านี้ และ เรียกใช้ในลักษณะที่มี SUBSCRIPT กำกับอยู่ 
+<li>ในภาษาโคบอล เป็นการกำหนดรูปแบบให้กับกลุ่มข้อมูล เพื่อนำมาสร้างตารางภายใน
+หน่วยความจำ หรือที่รู้จักกันทั่วไปในลักษณะของ ARRAY โดยจะมี Subscript เป็นตัวระบุ
+ตำแหน่งของข้อมูล ซึ่งในการเก็บข้อมูลแบบ ARRAY นั้นจะใช้กำหนดรายการข้อมูลที่มี PICTURE 
+เหมือน ๆ กันหลาย ๆ รายการ และเก็บข้อมูลที่มีจำนวนมาก ๆ ในการกำหนดกลุ่มข้อมูล
+ให้อยู่ในรูปแบบของ ARRAY หรือตารางนั้นเราจะกำหนดได้สูงสุดแต่ 3 มิติ เท่านั้น การกำหนด 
+OCCURS Clause ในบางกรณีก็เป็นการเก็บค่าของข้อมูลเอาไว้ ในรูปของ 
+ARRAY TABLE ปละสามารถเรียกข้อมูลเหล่านั้นมาใช้ภายในโปรแกรม ซึ่งโดยปกติ ตาราง (Array Table) 
+ดังกล่าวเมื่อรับข้อมูลเข้ามาทำงานแล้วก็จะส่งค่าไปเก็บไว้ ด้วย คำสั่ง MOVE การจัดข้อมูลในรูปภาษา COBOL 
+ให้อยู่ในรูปแบบของตาราง จัดได้เป็น 1 มิติ, 2 มิติ และ 3 มิติ 
+<li>PICTURE clause ใช้สำหรับนิยาม (Define) ลักษณะของ Item ซึ่งเตรียมเนื่อที่เก็บในหน่วยความจำแบ่ง
+ออกเป็น 4 ชนิด คือ Alphabelic, Numeric, Alphanumeric และ Report Item<br>
+
+	<ol type=1>
+	<li> Alphabetic Item จะมี picture เป็นตัวอักขระ "A" A แต่ละตัว หมายถึงมูลค่าในแต่ละตำแหน่ง
+ในฟิลด์นั้นเป็นตัวอักษรตัวใดตัวหนึ่ง (A ถึง Z) หรือเป็น space ก็ได้
+	<li>Numeric Item จะมี Picture ที่ประกอบด้วย Combination ของตัวอักขระต่อไปนี้คือ <br>
+9, V, S และ P โดยที่ตัวอักขระหนึ่งตัว แทนตำแหน่งใน Data Item หนึ่งตำแหน่ง
+		<ul>
+		<li><b>9</b> คือ ตำแหน่งของตัวอักขระใน Item นั้นเป็นตัวเลข (0-9)
+		<li><b>V</b> คือ บอกตำแหน่งของจุดทศนืยม แต่ไม่นับ V รวมอยู่ในขนาดของ Item นั้นด้วย
+		<li><b>S</b> คือ บอกตำแหน่งของเครื่องหมายบวกหรือลบหนึ่งตัว และไม่นัย S รวมอยู่ในขนาดของ Item 
+นั้นด้วย และ S จะต้องเป็นตัวอักขระตัวซ้ายมือสุดใน PICTURE Clause 
+		<li><b>P</b> คือบอกตำแหน่งของจุดทศนิยมที่ใช้ในการแสดงรูปแบบของการแสดงข้อมูลออกซึ่งไม่ได้เกิดขึ้น
+จริงกับค่าจริงที่ได้จากการประมวลผล หรือค่าที่เก็บอยู่ในหน่วยความจำ หรือ ใน Item เมื่อ 
+P อาจจะเป็นตัวอักขระทางซ้ายมือหรือทางขวามือของ Item ก็ได้ P หนึ่งตัวจะหมายถึงเพิ่ม
+เลขศูนย์เข้าไปหนึ่งตัวและตามด้วยจุดทศนิยมทางซ้ายมือ หรือทางขวามือของ P ตัวสุดท้ายตาม
+ตำแหน่งที่ P อยู่ และไม่นับ P รวมในขนาดของ Item นั้นด้วย
+		</ul>
+	<li>Alphanumeric Item จะมี Picture เป็นตัวอักขระ "X" หมายถึง แต่ละตำแหน่งใน 
+Item นั้นประกอบด้วยตัวอักษรตัวใดตัวหนึ่ง (A ถึง Z) หรือ Space หรือตัวเลข (0 ถึง 9) หรือ 
+อักขระพิเศษ เช่น Period, Comma หรือ Dollar Sign เป็นต้น
+	<li>Report Item หมายถึง Item ที่มีการ Editing ด้วยตัวอักขระต่าง ๆ ให้อยู่ในรูปที่สวยงาม 
+สะดวกในการอ่าน ตามความต้องการของโปรแกรมเมอร์ ซึ่งจะส่งผลลัพธ์ออกทาง Printer 
+หรือแสดงผลลัพธ์บนหน้าจอ
+	</ol>
+
+<li>RENAME clause. นี้ทำให้โปรแกรมเมอร์ สามารถจัดกลุ่มใหม่ให้กับข้อมูลเดี่ยว (Regrouping 
+Elementary Data Item) หรือใช้ในการเปลี่ยนชื่อข้อมูลเพื่อประโยชน์ในการเขียนโปรแกรมบางกรณี 
+ในคำสั่งนี้ Software ปัจจุบันไม่ค่อยจะมีให้ใช้ และไม่คอยเป็นที่นิยมใช้กัน
+<li>VALUE clause.  ใช้สำหรับนิยาม หรือกำหนดค่าแรกของ ตัวแปร หรือค่าคงที่ หรือค่าขอวชื่อ
+ข้อมูลที่มีเงื่อนไข ในส่วนของ WORKING-STORAGE SECTION ซึ่งมี 2 รูปแบบคือ
+	<ol type=1>
+	<li>ใช้กำหนดค่าให้กับรายการย่อย (Elementary Data Item) ซึ่งอาจจะเป็นรายการข้อมูล
+เดี่ยวที่มีเลขบอกระดับ 77 หรือรายการย่อย ที่มีเลขบอกระดับ 01
+	<li>ใช้กับรายการข้อมูลที่มีเลขบอกระดับ 88 หรือชื่อเงื่อนไข ในที่นี้ literal อาจจะเป็น ทั้ง 
+Figurative Constant หรือ Numeric Literal และ Nonnumeric Literal ได้ ค่าที่กำหนดไว้นั้น
+จะถูกส่งไปยังหน่วยความจำที่ถูกจองเอาไว้ตั้งแต่เริ่มต้นการทำงานของโปรแกรม การนำค่าไปใส่ใน 
+หน่วยความจำที่จองไว้จะใช้หลักเกณฑ์อย่างเดียวกันกับการใช้คำสั่ง MOVE
+	</ol>
+<li>JUSTIFIED clause. เมื่อมีการเปลี่ยนแปลง หรือทำการย้ายข้อมูลจากอีดที่หนึ่งไปยังอีกที่หนึ่งนั้น 
+จะต้องมีการกำหนดตำแหน่งให้กับข้อมูลที่จะส่ง หรือย้ายไปภายใน Receiving Alphabetic Item หรือ 
+Alphanumeric Data Item หรือต้องการที่จะทำการส้งข้อมูลออกไปแสดงทางหน้าจอภาพหรือ
+ทางเครื่องพิมพ์ เราสามารถจะกำหนดรูปแบบในการพิมพ์ได้ โดยปกติแล้ว ข้อมูลภายใน 
+Receiving Alphanumeric Item หรือ Alphabetic Item ซึ่งข้อมูลที่อยู่ใน Receiving Item 
+จะเริ่มจากตำแหน่งของตัวอักขระทางซ้ายมือสุดภายใน Field ของ Receiving ส่วนในตำแหน่งของ
+ตัวอักขระที่อยู่ทางขวามือที่ไม่ใช้คอมพิวเตอร์จะทำการใน Blank Space ให้ถ้าหากว่ามีการตัดส่วนที่เกินทิ้ง 
+คอมพิวเตอร์ก็จะทำการตัดตัวอักขระที่อยู่ทางขวามือก่อน
+	<ul>
+	<li>Justified Clause จะมีผลทำให้ ตำแหน่งของข้อมูลภายใน Receiving Field มีการกำหนด 
+Justified Clause ซึ่งข้อมูลที่ส่งมา หรือรับเข้ามามีเนื้อที่ใช้งาน ซึ่งมีขนาดมากกว่าเนื่อที่ของ Receiving 
+คอมพิวเตอร์จะทำการตัดตัวอักขระที่ทางซ้ายมือออกไป และ เมื่อข้อมูลของ Receiving ที่มีการกำหนดด้วย 
+JUSTIFIED Clause ซึ่งม่ขนาดใหญ่กว่าข้อมูลที่ส่ง หรือรับเข้ามา ข้อมูลนั้นจะถูกจัดเข้าในตำแหน่งชิดขวา
+มือสุดในเนื่อที่นั้น และเนื่อที่ที่เหลือไม่ใช้ ซึ่งจะอยู่ถัดไปทางซ้ายมือจะถูกใส่ Blank Space เข้าไป<br>
+	<li>Justified Clause จะใช้กับ Elementary Item ที่เป็น Nonnumeric Data ซึ่งเขียนต่อจาก 
+VALUE Clause และจะนำไปใช้กับเลขบอกระดับ 66 หรือ 88 ไม่ได้
+	<li>SIZE clause. ใช้สำหรับกำหนดจำนวนตำแหน่งตัวอักขระของ Item นั้นภายในหน่วยความจำ 
+ซึ่งภายใน Entry นั้น เป็นข้อมูลเดี่ยว ต้อง มี SIZE Clause หรือ PICTURE clause แต่ถ้าหากว่าเป็นข้อมูลกลุ่ม 
+อาจจะไม่ใช้ทั้งสอง Clause เลยก็ได้ ถ้าหากว่าใช้ SIZE clause นั้นขนาดของมันต้องเท่ากับผลรวมของขนาดข้อมูลเดี่ยว 
+ทั้งหมดที่ประกอบขึ้นเป็นกลุ่มข้อมูล (Data Item) นั้น ถ้าหาก Entry นั้น อธิบายด้วย SIZE และ PICTURE clause 
+ทั้งสองจะต้องมีความหมายตรงกัน (they Must Agree)
+	<li>CLASS clause. ในภาษาโคบอลได้จัดแบ่งชนิดของ Data Item ออกเป็น 3 ชนิดคือ
+<ol type=1><li>Numeric Items ประกอบไปด้วย ตัวเลข 0 ถึง 9 และอาจจะมีตุดทศนิยมที่สมมุติขึ้น 
+และอาจจะมีเครื่องหมายบวก หรือเครื่องหมายลบก็ได้
+	<li> Alphabetic Items ประกอบไปด้วยตัวอักษรที่เป็นภาษาอังกฤษ A ถึง Z
+	<li>Alphanumeric Item ประกอบไปด้วยตัวอักขระ ทุกชนิดที่ระบุไว้ หรือเท่าที่
+เครื่องคอมพิวเตอร์นั้น ๆ จะรับได้ ซึ่งอาจจะมี ทั้งตัวเลข ตัวอักษรภาษาอังกฤษ หรืออักขระพิเศษก็ได้
+	การใช้ CLASS clause นั้นเพื่อกำหนดการรับค่าของตัวแปร หรือขัอมูลในแต่ละชนิดซึ่ง 
+Class Clause สำหรับ Item นั้น และจะเขียนไว้ที่ระดับใดก็ได้ ซึ่ง Class Clause ของข้อมูลที่เป็นระดับกลุ่มจะมีผลต่อ 
+ข้อมูลเดี่ยวแต่ละตัวที่อยู่ภายใน Item นั้น และจะต้องไม่ขัดแย้งกันกับ Class อื่น ๆ ที่กำหนดในข้อมูลเดี่ยวนั้น ๆ 
+เราอาจจะใช้ Class Clause เป็นตัวทดสอบการรับข้อมูลเข้ามาใช้ก็ได้ ซึ่งเราอาจจะเขียนให้อยู่ในรูปเงื่อนไข 
+ซึ่งใช้เปรียบเทียบค่าของ Data Item ว่าเป็น Numeric หรือ Alphabetic โดยอาจเขียนให้อยู่ในรูปคำสั่งของ 
+IF Statement
+	</ul>
+
+	
+<li>USAGE Clause. ใช้กับ Item แต่ละตัวในระดับใดก็ได้ ถ้าใช้กับข้อมูลกลุ่ม จะต้องไม่
+ขัดแย้งกับ Entry ที่อยู่ในระดับที่ตำกว่าระดับที่มันอยู่ ซึ่งสามรถเขียนได้หลายรูปแบบที่แตกต่างกันไป และในบางครั้ง
+ของการทำงาน อาจจะมีความจำเป็นที่ต้องการเก็บค่าของ ตัวแปรที่จัดเก็บในรูปของ Index (Index Variable) เพื่อ
+การนำไปใช้ในภายหลัง ซึ่งจะต้องมีหน่วยความจำชั่วคราวสำหรับการเก็บ และเรียก ตัวแปรชนิดนี้เข้ามาใช้งานภายในโปรแกรม 
+ซึ่งจะต้องมีหนีวยความตำชั่วคราวสำหรับการเก็บ และเรียก ตัวแปรชนิดนี้เข้ามาใช้งานภายในโปรแกรม 
+<li>BLANK WHEN ZERO clause. ใช้เมื่อต้องการให้ Blank Space แทนที่ค่าที่เป็นศูนย์ ไม่ว่าค่าที่เป็นศูนย์นั้น 
+จะอยู่ในตำแหน่งที่มีค่านัยสำคัญ หรือไม่ ใช้ได้เฉพาะกับข้อมูลเดี่ยว (Elementary Item) เท่านั้น และจะใช้กับ 
+Item ที่มีค่า หรือชนิดที่เป็น Numeric Item หรือ Numeric Edited Item เท่านั้น และเมื่อใช้กับ Item ที่มี PICTURE เป็น 
+Numeric หลังจากที่ใช้แล้ว Item นั้นจะเป็น Numeric Edited และจะใช้กับเลขบอกระดับ 66 หรือ 88 ไม่ได้
+</ul>
+</ol>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><A NAME="WORKING-STORAGE SECTION">2. WORKING-STORAGE SECTION.</A></b>
+</font>
+</td>
+</tr>
+</table> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ในการทำงานตามคำสั่งภายในโปรแกรม (Execute Object Program) ผลลัพธ์ 
+และข้อมูล ที่ได้จากการทำงานตามคำสั่งภายในโปรแกรมนั้น รวมถึง ข่าวสารอื่น ๆ ที่จำเป็นจะตัองเก็บลงในหน่วยความจำ 
+เพื่อเป็บไว้ใช้งานในคราวต่อไป หรือจะทำการเรียกใช้อีกครั้งจากหน่วยความจำ เพื่อเก็บไว้ใช้งานในคราวต่อไป หรือจะทำการเรียก
+ใช้อีกครั้งจากหน่วยความจำ ซึ่งจะต้องเตรียมเนื้อที่ในหน่วยความจำเพื่อการนี้ ในภาษาโคบอลเราทำได้โดยเขียนโปรแกรม 
+หรือชุดคำสั่งขึ้นสำหรับให้คอมพิวเตอร์เตรียมเนื่อที่ภายในหน่วยความยำเพื่อการใช้งานไว้ภายในส่วนของ 
+WORKINF-STORAGE SECTION ซึ่งจะอธิบายรายละเอียดไว้ใน Record Description Entry ในการอธิบายรายละเอียด
+ของขัอมูลนั้นเราจะแบ่ง หรือเขียนแยกรายการขัอมูลออกเป็น 2 ประเภทคือ ข้อมูลอิสระ (Independent Item) และข้อมูลกลุ่ม 
+(Group Item) โดยจะต้องเขียน Section Header ที่มาร์จิน A แล้วตามด้วย Entries ของกลุ่มข้อมูล และ Entries ของข้อมูลอิสระ 
+ซึ่งอธิบานไว้ใน FILE SECTION ซึ่งแบ่งออกเป็น 2 ตอน คือ</p>
+<ol>
+<li> Independent Data Item เป็นกลุ่มข้อมูลอิสระ หรือ ข้อมูลที่ไม่รวมอยู่ในกลึ่มใดซึ่งใช้ Level No.77 ELEMENTARY 
+FIELD ซึ่งชื่อข้อมูลในระดับ 77 และ 01 นั้นจะตั้งให้ซึ่กับชื่อโปรแกรม หรือชื่อตัวแปรใด ๆ ภายในโปรแกรมไม่ได้ แต่สำหรับขัอมูลที่
+อยู่ระดับตำกว่า 01 อาจจะตั้งชื่อชำกันได้ ซึ่งเราจะต้องระบุชื่อของ Record ทุกครั้งที่มีการเรียกใช้ข้อมูลนั้น ๆ เสมอ
+<li>Group Item Or Group Field อธิบายถึงกลึ่มช้อมูลที่มีความสัมพันธ์เกี่ยวเนื่องกัน โดยจะใช้เลขบอกระดับ 01 
+อธิบายถึง Record ซึ่งอธิบายเหมือนกันกับ Record Description ใน FILE SECTION ซึ่งบอกรายละเอียดของหน่วยความจำ
+ที่ใช้เก็บข้อมูล ซึ่งเป็นคนละส่วนกับหน่วยความจำที่ใช้เก็บข้อมูลที่เป็น Input หรือ Output โดย Group Item จะนำมาแสดงไว้ที่ 
+WORKING-STORAGE SECTION ที่ระดับ 01 ซึ่งต่อจากระดับ Level No,77 โดยจะแบ่งออกเป็นแต่ละ Field หรือ Item
+</ol>
+
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><A NAME="LINKAGE SECTION">3. LINKAGE SECTION. </A></b>
+</font>
+</td>
+</tr>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; จะประกอบไปด้วยชื่อ ซึ่งใช้ เลขบอกระดับ 77 หรือ 01 และภายในกลุ่ม No. 01 
+อาจจะประกอบไปด้วยเลขบอกระดับตั้งแต่ 02, 03,... ขึ้นไป ภายในโปรแกรมหลัก (Main Program) จะต้องเตรียมเนื่อที่ (Defined) 
+ให้สำหรับชื่อเริ่มต้น (Original Names) ภายในโปรแกรมย่อยที่อ้างถึงชื่อเหล่านี้ และชื่อเหล่านี้จะต้องกำหนดใน  LINKAGE SECTION 
+ด้วยเพราะเป็นเพียงค่าที่ไม่ได้มีอยู่จริงในโปรแกรมย่อย โปรแกรมย่อยใช้ตำแหน่งที่อยู่ (Address) ของชื่อค้นหา และสำหรับ
+การเข้าถึงค่าข้อมูล (Content)</p>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><A NAME="SCREEN SECTION">4. SCREEN SECTION. </A></b>
+</FONT>
+</td>
+</tr>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เป็นการกำหนดหน้าตาของจอภาพ และ Data Item ซึ่งอาจจะเป็น Group Item หรือ Elementary Item 
+โดยใช้ Level No.01-49</p>
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+			SCREEN   SECTION
+			level number		  [ SCREEN-NAME ] [ BLANK-SCREEN ]
+							[ LINE NUMBER IS   [ PLUS ]   integer-1 ]
+							[COLUMN NUMBER IS   [ PLUS ]   integer-2 ]
+							[BLANK LINE ]
+									[ HIGHLIGHT ]
+							[ BELL ]   [ BLINK          ]
+											 [ literal-2      ]
+	[ VALUE IS literal-1 ]					[ FROM ]  [ Identifier-1 ]
+	[ PICTURE ]						 	 [ TO Identifier-2 ]
+				IS CHARACTER-STRING
+	[ PIC 	  ]							     [ USING Identifier-3 ]
+	[ BLANK WHEB ZERO ]
+
+		[ JUSTIFIED ]
+					RIGHT
+		[ JUST          ]
+	[ AUTO ]
+	[ SECURE ]
+</font></pre>
+
+
+
+โดยที่ ;<br>
+	<ul>
+	<li>	Level number		ใช้ได้ 01-49, ภ้า 01 หมายภึง SCREEN-NAME<br>
+	<li>	SCREEN-NAME		ชื่อ SCREEN ที่ตั้งขึ้น<br>
+	<li>	BLANK-SCREEN		การ Clear จอภาพ<br>
+	<li>	LINE-NUMBER		การกำหนดตำแหน่ง COLUMN<br>
+	<li>	Integer			เลบจำนวนเต็ม<br>
+	<li>	BLANK LINE		Clear บรรทัดตั้งแต่ตำแหน่งที่ CURRENT CURSOR อยู่ไปจนสุดบรรทัด<br>
+	<li>	BELL			ทำให้เกิดเสียงเมื่อรับส่งข้อมูล<br>
+	<li>	HIGHLIGHT		ให้บริเวณนั้นมีแสงเข้ม<br>
+	<li>	BLINK			แสงกระพริบตรงตำแหน่งที่รอรับข้อมูล<br>
+	<li>	VALUE			ใช้กำหนด่าให้กับตัวแปร<br>
+	<li>	PICTURE			กำหนดชนิดและขนาดของข้อมูล<br>
+	<li>	Identifier-1,2,3		เป็น Filed ที่อธิบายไว้แล้วใน WORKING-STORAGE SECTION<br>
+	<li>	BLANK WHEN ZERO	ใช้เมื่อแทนที่ 0 ด้วย BLANK<br>
+	<li>	JUSTIFIED RIGHT		กำหนดให้ข้อมูลชิดขวา (ใช้กับ Alphanumeric)
+	<li>	AUTO			ให้ CURSOR SKIP ไปรับข้อมูลถัดไปได้เลย โดยไม่ต้องกด ENTER<br>
+	<li>	SECURE			ต้องการใช้ Field นั้นเป็น รหัสลับ คือ ไม่ปรากฏข้อมูลจริง ๆ แต่จะปรากฏเครื่องหมาย "*" แทน<br>
+	<li>	FROM			ใช้เมื่อต้องการให้ CURSOR ไปรอรับข้อมูลจาก Literal-2 หรือ Identifier-1 ปรากฏออกมาตรงกับตำแหน่งที่กำหนด<br>
+	<li>	TO			ใช้เมื่อต้องการให้ CURSOR ไปรอรับข้อมูลตรงตำแหน่งที่ระบุ<br>
+	<li>	USING			ใช้เมื่อต้องการให้เสนอข้อมูลออกมา หรือ สามารถรับข้อมูลเข้าไปได้ตรงตำแหน่งที่กำหนดให้ <br>
+	</ul>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<A NAME="คำสั่งที่ใช้ใน SCREEN SECTION">คำสั่งที่ใช้ใน SCREEN SECTION</A>
+</font>
+</td>
+</tr>
+</table>
+<ol type=1>
+<li>DISPLAY เป็นคำสั่งที่ใช้แสดง Data-Item, Group-Item หรือ ค่าคงที่ที่กำหนดใน SCREEN SECTION 
+ปรากฏออกมาทางจอภาพ (ตัวแปร หลังคำสั่งคำว่า TO/USING)<br>
+<li> ACCEPT เป็นคำสั่งที่ใช้ให้เครื่องคอมพิวเตอร์ รับข้อมูลทาง KEYBOARD หรือวันที่ เวลาของระบบเครื่อง<br>
+</ol>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+</body>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass4.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+</html>

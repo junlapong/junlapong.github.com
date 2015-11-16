@@ -1,0 +1,380 @@
+<html>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass5.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+<head>
+<title>pass5</title>
+<meta charset="utf-8" />
+</head>
+<body bgcolor="#FFFFFF" text ="#0000ff">
+<TABLE BORDER = 0 align="center">
+
+     <TR><Td width=80><A HREF="main.htm"><IMG SRC="main.jpg" Border=0></A></Td>
+         <Td width=80><A HREF="pass1.htm"><IMG SRC="pass1.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass2.htm"><IMG SRC="pass2.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass3.htm"><IMG SRC="pass3.jpg" Border=0></a></Td>
+         <Td width=80><A HREF="pass4.htm"><IMG SRC="pass4.jpg" Border=0></a></Td>
+          <Td width=80><a name="<IMG SRC="pass1.jpg"><IMG SRC="pass5.jpg" Border=0></a></Td>
+          <Td width=80><A HREF="pass6.htm"><IMG SRC="pass6.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass7.htm"><IMG SRC="pass7.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass8.htm"><IMG SRC="pass8.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass9.htm"><IMG SRC="pass9.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass10.htm"><IMG SRC="pass10.jpg" Border=0></A></Td>
+     
+</TR>
+    </TABLE>
+
+<center>
+<h3><b>บทที่ 5<br>PROCEDURE DIVISION</b></h3></center>
+
+<dl>
+<dt>
+<dd> <IMG SRC="drosball.gif"><a href="#องค์ประกอบของ">องค์ประกอบของ</a>
+<dd> <IMG SRC="drosball.gif"><a href="#ประเภทของคำสั่ง">ประเภทของคำสั่ง</a>
+<dd> <IMG SRC="drosball.gif"><a href="#คำสั่ง  OPEN">คำสั่ง  OPEN</a>
+<dd> <IMG SRC="drosball.gif"><a href="#คำสั่ง READ">คำสั่ง READ</a>
+<dd><IMG SRC="drosball.gif"> <a href="#คำสั่ง ACCEPT">คำสั่ง ACCEPT</a>
+<dd><IMG SRC="drosball.gif"> <a href="#คำสั่ง WRITE">คำสั่ง WRITE</a>
+<dd><IMG SRC="drosball.gif"> <a href="#คำสั่ง DISPLAY">คำสั่ง DISPLAY</a>
+<dd> <IMG SRC="drosball.gif"><a href="#คำสั่ง GO TO">คำสั่ง GO TO</a>
+<dd> <IMG SRC="drosball.gif"><a href="#คำสั่ง CLOSE">คำสั่ง CLOSE</a>
+<dd><IMG SRC="drosball.gif"> <a href="#คำสั่ง STOP">คำสั่ง STOP</a>
+<dd> <IMG SRC="drosball.gif"><a href="#คำสั่ง MOVE">คำสั่ง MOVE</a>
+</dl>
+
+
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DIVISION</b> ลำดับสุดท้ายของโปรแกรมภาษาโคบอล คือ PROCEDURE DIVISION ซึ่งนับว่า
+เป็น DIVION ที่มีความสำคัญมากที่สุดส่วนหนึ่งของโปรแกรม เป็น DIVISION ที่แสดงถึงตรรกวิธีชอง
+โปรแกรมตามที่กำหนดไว้ใน flowchart อันประกอบด้วยคำสั่งต่าง ๆ ที่สั่งให้คอมพิวเตอร์กระทำกับข้อมูลที่
+กำหนดไว้ใน DATA DIViSION<br>
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.1<a name="องค์ประกอบของ"> องค์ประกอบของ PROCEDURE DIVISION</a></b>
+</font>
+</td>
+</tr>
+</table>
+<ul>
+<li>ในการเขียน Procedure Division จะต้องเริ่มด้วยชื่อ division คือ PROCEDURE DIVISION
+ใน area A และลงท้ายด้วยจุด
+<li>ใน Procedure division ประกอบด้วย paragraph(s) แต่ละ paragraph ประกอบด้วย sentence
+อย่างน้อย 1 sentence และแต่ละ sentence ประกอบด้วยคำสั่ง (statement) อย่างน้อย 1 statement โดย 
+paragraph หนึ่ง ๆ ต้องเริ่มด้วยชื่อของ paragraph ที่เรียกว่า procedure-name ใน area A ส่วน sentence
+หรือ statement ต่าง ๆ ต้องเริ่มต้นใน area B
+</ul>
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+			PROCEDURE DIVISION	
+				procedure-name.
+					.
+	          		sentences
+					.
+</font>
+</pre>
+
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2 <a name="ประเภทของคำสั่ง">ประเภทของคำสั่ง (Tyoe of Instruction)</a></b>
+</font>
+</td>
+</tr>
+</table>
+ประเภทของคำสั่งที่ใช้กันมากที่สุดใน Procedure division แบ่งได้ 2 ประเภทคือ
+<ol>
+<li>คำสั่งบอกเล่า (Imparative Statements) หมายถึงคำสั่งที่ประกอบด้วยคำกิริยา ซึ่งระบุการกระทำ
+หรือวิธีการที่จะก่อให้เกิดขึ้นแบ่งออกได้เป็น 4 พวก
+<ul>
+<li> คำกริยาเกี่ยวกับการนำข้อมูลเข้าและออก ได้แก่ คำสั่ง OPEN, READ, ACCEPT, 
+WRITE, DISPLAY และ CLOSE
+<li>คำกริยาเกี่ยวกับการเคลื่อนย้ายข้อมูล ได้แก่ คำสั่ง MOVE
+<li>คำกริยาเกี่ยวกับการคำรวณ ได้แก่ คำสั่ง ADD, SUBTRACT, MULTIPLY, DIVIDE 
+และ COMPUTE
+<li>คำกริยาเกี่ยวกับการควบคุมขั้นตอนการประมวลผลได้แก่ คำสั่ง GO TO, PERFORM, 
+EXIT และ STOP
+</ul>
+<li>คำสั่งเงื่อนไข (Conditional Statement) หมายถึง คำสั่งที่มีการทดสอบเงื่อนไขที่กำหนดขึ้นว่า
+เป็นจริงหรือไม่ ถ้าเงื่อนไขเป็นจริงจะสั่งให้คอมพิวเตอร์ทำอะไร ถ้าเงื่อนไขไม่จริงจะสั่งให้คอมพิวเตอร์ทำอะไร 
+ได้แก่ คำสั่ง IF
+</ol>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2.1<a name="คำสั่ง  OPEN">คำสั่ง  OPEN </a> </b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นคำสั่งให้เครื่องค้นหา file ที่ต้องการและเตรียมไว้ให้พร้อม นั่นคือ input files และ output 
+files ทั้งหมดจะต้องถูกเปิดก่อนที่จะใช้ files นั้น ๆ โดยใช้คำกริยา OPEN 
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+				INPUT	       	file-name	   [, file-name-2]...
+			OPEN
+				OUTPUT		file-name	   [, file-name-2]...
+</font></pre>
+
+คำอธิบาย
+<ul>
+<li>file-name คือ ชื่อของ file ที่ระบุไว้ใน FD entry ใน DATA DIVISION  และใน  SELECT 
+statement ใน ENVIRONMENT DIVISION
+<li>ตามรูปแบบข้างตัน ต้องกำหนดหน้าที่ของ file ที่เปิดด้วยว่า file ใดเป็น file ที่อ่านข้อมูลเข้ามา 
+(input file) หรือ file ใดใช้แสดงผลลัพธ์ (output file) โดยใช้คำ INPUT, OUTPUT นำหน้า
+</ul>
+ข้อสังเกต
+<ul>
+<li>การเปิด file มิได้หมายความว่า ข้อมูล record แรกพร้อมที่จะประมวลผล ความพร้อมนี้จะเกิด
+ขึ้นก็ต่อเมื่อทำคำสั่ง READ statement คำสั่งแรก
+<li>การอ่าน (READ) หรือบันทึก หรือพิมพ์ (WRITE) file ใด ๆ จะต้องทำการเปิด file นั้น ๆ ก่อน
+<li>การเปิด files อาจจะเปิดพร้อม ๆ กันหมดทุก file ในเวลาเดียวกัน หรือจะเปิดในเวลาต่างกัน 
+(เปิดเมื่อถึงเวลาที่จะใช้ file นั้น) ก็ได้
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2.2<a name="คำสั่ง READ"> คำสั่ง READ</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นคำสั่งที่ใช้อ่านข้อมูลจาก input file เข้ามาเก็บไว้ใน input buffer ในหน่วยความจำภายในตาม
+รูปร่างทที่กำหนดไว้ใน FILE SECTION พร้อมที่จะใช้ประมวลผลต่อไป 
+
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+	      	READ  file-name	RECORD (INTO area-name) (AT END imparative-statement,...)
+</font>
+</pre>
+
+คำอธิบาย
+<ul>
+<li>file-name คือชื่อของ file ที่ปรากฏทั้งใน SELECT statement  ใน ENVIRONMENT 
+DIVISION. ใน FD entry ใน DATA DIVISION และในคำสั่ง OPEN statement ใน 
+PROCEDURE DIVISION
+<li>ถ้าเลือกใช้ INTO ด้วย จะมีความหมายว่า เมื่อ READ ข้อมูลเข้ามาเก็บไว้ในหน่วยความจำ
+ภายใน (input buffer) แล้ว จะ MOVE ข้อมูลนั้นไปเก็บไว้ที่ area-name ด้วย ซึ่ง area-name อาจจะอยู่ใน
+WORKING-STORAGE SECTION หรือ FILE SECTION ช่วง output file ด้วย
+<li>จากรูปแบบ READ statement สามารถใช้ทดสอบว่าข้อมูลใน file นั้น ถูกอ่านเข้ามาหมดหรือยัง
+โดยใช้ AT END ถ้าหมดแล้วให้ไปทำ imparative-statement ที่กำหนดไว้หลังคำว่า END
+</ul>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2.3 <a name="คำสั่ง ACCEPT">คำสั่ง ACCEPT</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในบางโปรแกรมปริมาณข้อมูลที่นำเข้าไปใช้ในการประมวลผลมีจำนวนน้อย จึงไม่มีความจำเป็นต้อง
+สร้าง file ขึ้นมา ดังนั้นในการอ่านหรือรับข้อมูลจำนวนน้อย ๆ อาจใช้คำสั่ง ACCEPT แทน คำสั่ง READ ได้
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+		ACCEPT  (position-spec)	data0name	(FROM  mnemonic-name)
+</font></pre>
+
+คำอธิบาย
+<ul>
+<li>data-name คือชื่อของ field หรือ record ที่ต้องการรับข้อมูลเข้าไป โดย data-name นี้จะระบุ
+ไว้ใน DATA DIVISION ส่วนมากกำหนดใน WORKING-STORAGE SECTION
+<li>mnemonic-name คือชื่อเครืองมือที่ผู้ใช้กำหนดให้รับข้อมูลเข้ามาโดยกำหนดชื่อเครื่องไว้ใน
+มาตรฐานซึ่งแต่ละระบบกำหนดไว้ล่วงหน้า
+<li>position-spec หมายถึง การกำหนดตำแหน่งการรับข้อมูลบนจอภาพ
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2.4 <a name="คำสั่ง WRITE">คำสั่ง WRITE</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นคำสั่งที่ใช้บันทึกหรือพิมพ์ข้อมูลลงบนสื่อข้อมูล เช่น บันทึกข้อมูลลงบนแผ่น diskette หรือ
+พิมพ์ข้อมูลบนกระดาษต่อเนื่องทาง PRINTER
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+		WRITE  record-name	(FRON area-name)
+		  [    {BEFORE} 			{identifier}   (LINE]   	  ]
+		  [   			ADVANCING			  ]
+		  [    {AFTER}    			{integer}	    [LINES]	  ]
+</font></pre>
+
+คำอธิบาย
+<ul>
+<li>record-name คือชื่อ record ของ output filw ที่กำหนดรายละเอียดไว้ในช่วง file section
+ใน DATA DIVISION 
+<li>area-name คือชื่อของ record ที่อธิบายไว้ใน WORKING-STORAGE SECTION เป็นส่วนที่
+ต้องการย้ายข้อมูลไปยัง record ของ output file ก่อนการแสดงข้อมูล 
+<li>identifier คือชื่อของ field ซึ่งต้องมีค่าเป็นจำนวนเต็มบอกจำนวนบรรทัดที่ต้องการให้ปัดแคร่
+ก่อนหรือหลังการพิมพ์ 
+<li>integer คือ ค่าคงที่ชนิดตัวเลข ซึ่งบอกจำนวนบรรทัดของการปัดแคร่ 
+<li>ถ้าเลือกใช้ BEFORE... หมายถึง ให้พิมพ์ข้อมูลก่อนแล้วจึงปัดแคร่ 
+แต่ถ้าใช้ AFTER... หมายถึง ให้ปัดแคร่ก่อนแล้วจึงพิมพ์ข้อมูล
+</ul> 
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2.5 <a name="คำสั่ง DISPLAY">คำสั่ง DISPLAY</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นคำสั่งให้ส่งข้อมูลออกมาแสดงผลบนจอภาพ ส่วนมากจะใช้กรณีข้อมูลที่จะแสดงผลนั้นมีจำนวนน้อย
+จึงไม่จำเป็นต้องสร้าง output file
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+						        {data-name-1}   [data-name-2]
+	       DISPLAY  (position-spec)				 			 ...  [UPON  mnemonic-name]
+						        {   literal-2   }   [   literal-2   ]
+</font>
+</pre>
+
+คำอธิบาย
+<ul>
+<li>data-name-1, data-name-2 คือ ชื่อข้อมูลที่ค้องการแสดงผล
+<li>literal-1, literal-2 คือ ค่าคงที่ที่ต้องการแสดงผลซึ่งรวมทั้ง Figurative Constant ด้วย
+<li>mnemonic-name คือ ชื่อเครื่องมือเฉพาะที่ต้องการใช้แสดงผลโดยกำหนดชื่อเครื่องไว้ใน 
+special-names ใน ENVIRONMENT DIVISION ถ้าไม่ใช้ UPON...clause แสดงผลข้อมูลทางเครื่องมือ
+ที่ระบบกำหนดไว้ล่วงหน้า เช่น Printer หรือหน้าจอภาพ
+<li>position-spec หมายถึง การกำหนดตำแหน่งการแสดงค่าของตัวแปรหรือค่าคงที่บนจอภาพ
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2.6 <a name="คำสั่ง GO TO">คำสั่ง GO TO</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดยปกติเครื่องจะทำงานตามคำสั่งที่ปรากฏใน PROCEDURE DIVISION เรืยงลำดับจากบนมา
+ล่างจนกระทั่งจบโปรแกรม แต่ถ้าเราต้องการให้เครื่องกระโดดไปทำงานยังคำสั่งที่ต้องการโดยไม่เรียงตามลำดับ
+กระทำได้โดยใฃ้คำสั่งควบคุม คือ คำสั่ง GO TO ซึ่งมีผลให้เครื่องย้ายการทำงานจากตำแหน่งปัจจุบันไป
+ยังอักตำแหน่งหนึ่งในโปรแกรม 
+
+<pre><font face="Ms Sans Serif">
+<b>รูปแบบ</b>
+					GO TO  procedure-name
+</font></pre>
+
+คำอธิบาย
+<ul>
+<li>procedure-name คือ ชื่อของ paragraph หรือ section ที่ต้องการให้ย้ายไปทำงาน
+<li>การทำงานชองคำสั่ง GP TO นี้ หลังจากที่ย้ายไปทำงานยัง paragraph ที่ต้องการแล้ว เครื่อง
+จะทำงานเรียงลำดับลงมาเรื่อย ๆ จนจบโปรแกรม (ถ้าไม่มีคำสั่งให้ย้ายการทำงานไปที่อื่น
+</ul>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2.7 <a name="คำสั่ง CLOSE">คำสั่ง CLOSE</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในโปรแกรมภาษาโคบอล files ทั้งหลายที่เปิด (OPEN) แล้ว เมื่อใช้งานเสร็จต้องทำการปิด files
+เหล่านั้นก่อนจบการทำงาน (STOP RUN) โดยใช้คำสั่ง CLOSE ซึ่งมีรูปแบบดังนี้
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+					CLOSE  file-name-1  [, file-name-2] ...
+</font></pre>
+
+คำอธิบาย
+<ul>
+<li>file-name-1, file-name-2 คือ ชื่อ file ที่ต้องการปิด ซึ่งชื่อ file ต้องตรงกับชื่อ file ที่ open ไว้แล้ว
+<li>การปิด file ไม่ต้องใช้คำว่า INPUT และ OUTPUT นำหน้า files ที่ต้องการปิดเหมือนการใช้
+คำสั่ง OPEN 
+<li>การปิด files อาจจะปิดพร้อม ๆ กันหลาย ๆ files ก็ได้ หรือปิดแต่ละ files ในเวลาต่างกันก็ได้
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2.8 <a name="คำสั่ง STOP">คำสั่ง STOP</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ใช้สำหรับสั่งให้เครื่องหยุดการทำงาน
+
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบ</b>
+					STOP  [ RUN ]
+					           [ literal ]
+</font></pre>
+
+คำอธิบาย
+<ul>
+<li>literal คือ ข้อความที่ต้องการให้เครื่องพิมพ์ออกมา เมื่อมาถึงคำสั่ง STOP
+<li>STOP RUN หมายถึง การสั่งให้เครื่องหยุดการทำงานตามโปรแกรมนั้น ดังนั้น คำสั่ง STOP RUN
+จึงอยู่ตอนท้ายสุดของโปรแกรม
+<li>ส่วนคำสั่ง STOP แล้วตามด้วย literal จะหมายถึงให้เครื่องหยุดการทำงานชั่วคราว
+ และเครื่องจะแสดงข้อความนั้นออกมาด้วย เครื่องจะทำงานต่อไปก็ต่อเมื่อพนักงานประจำเครื่องกดปุ่ม START 
+</ul>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b>5.2.9 <a name="คำสั่ง MOVE">คำสั่ง MOVE</a></b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นคำสั่งใช้สำหรับเคลื่อนย้ายข้อมูลจาก field หนึ่งไปยัง field(s) อื่น ๆ 
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบที่ 1</b>
+					[identifier-1]		
+			MOVE  		         	TO   identifier-2   [identifier-3]
+					[literal]
+</font></pre>
+
+คำอธิบาย
+<ul>
+<li>identifier-1คือ field ที่เราต้องการย้ายค่าไป
+<li>identifier-2, identifier-3 คือ field ที่รับค่าจากการย้ายนั้น
+<li>literal คือ ค่าคงที่ หรือ figurative constant ที่ต้องการย้ายค่าไป
+<li>คำสั่ง MOVE เป็นการย้ายข้อมูลใน identifier-1 หรือ ค่าคงที่ซึ่งอาจเรียกว่าหน่วยส่ง
+(sending field) ไปยัง identifier-2. identifier-3 และอื่น ๆ ถ้ามึซึ่งอาจเรียกว่า หน่วยรับ (receiving field)
+การย้ายข้อมูลมิได้หมายความว่าข้อมูลในหน่วยส่งจะถูกลบหายไปข้อมูลในหน่วยส่งยังคงอยู่เหมือนเดิม
+<li> คำสั่ง MOVE เป็นเพืยงการคัดลอก (copy) ข้อมูลจาก field หนึ่งไปยัง field หนึ่งไปยัง field อื่น ๆ เท่านั้น
+</ul>
+
+<pre><font face="Ms Sans Serif"><b>รูปแบบที่ 2</b>
+
+					[CORRERSPONDING]		
+			MOVE  		        	          	data-name-1    TO    data-name-2   
+					[CORR]
+</font></pre>
+คำอธิบาย
+<ul>
+<li>data-name-1 คือ ชื่อกลุ่มของ fields หรือชื่อของ record ที่ทำหน้าที่เป็นหน่วยส่ง
+<li>data-name-2 คือ ชื่อกลุ่มของ fields หรือชื่อของ record ที่ทำหน้าที่เป็นหน่วยรับ
+<li>คำสั่ง MOVE นี้เป็นการคุดลอกข้อมูลใน fields ของ datapname-1 ไปยัง fields ที่มีชื่อ 
+fields เหมือนกันใน data-name-2
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+</body>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass5.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+</html>

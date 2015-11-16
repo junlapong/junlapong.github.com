@@ -1,0 +1,203 @@
+<html>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass8.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+<head>
+<title>pass8</title>
+<meta charset="utf-8" />
+</head>
+<body bgcolor="#FFFFFF" text="#0000FF">
+<table border="0">
+    <tr><Td width=80><A HREF="main.htm"><IMG SRC="main.jpg" Border=0></A></Td>
+        <Td width=80><A HREF="pass1.htm"><IMG SRC="pass1.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass2.htm"><IMG SRC="pass2.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass3.htm"><IMG SRC="pass3.jpg" Border=0></a></Td>
+         <Td width=80><A HREF="pass4.htm"><IMG SRC="pass4.jpg" Border=0></a></Td>
+          <Td width=80><A HREF="pass5.htm"><IMG SRC="pass5.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass6.htm"><IMG SRC="pass6.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass7.htm"><IMG SRC="pass7.jpg" Border=0></A></Td>
+          <Td width=80><a name="<IMG SRC="pass1.jpg"><IMG SRC="pass8.jpg" Border=0></a></Td>
+          <Td width=80><A HREF="pass9.htm"><IMG SRC="pass9.jpg" Border=0></A></Td>
+          <Td width=80><A HREF="pass10.htm"><IMG SRC="pass10.jpg" Border=0></A></Td>
+    </tr>
+</table>
+<center>
+<h3><b>บทที่ 8<br>โปรแกรมย่อย</b></h3>
+</center>
+<dl>
+<dt>
+<dd><IMG SRC="drosball.gif"><a href="#โปรแกรมย่อย (Subprogram or Subroutine)">โปรแกรมย่อย (Subprogram or Subroutine)</a>
+<dd><IMG SRC="drosball.gif"><a href="#จุดประสงค์ของการเขียนโปรแกรมย่อย">จุดประสงค์ของการเขียนโปรแกรมย่อย</a>
+<dd><IMG SRC="drosball.gif"><a href="#ภาษาโคบอลกับการเขียนและเรียกใช้โปรแกรมย่อย">ภาษาโคบอลกับการเขียนและเรียกใช้โปรแกรมย่อย</a>
+<dd><IMG SRC="drosball.gif"><a href="#CALL Statement">CALL Statement</a>
+<dd><IMG SRC="drosball.gif"><a href="#EXIT PROGRAM Statement">EXIT PROGRAM Statement</a>
+</dl>
+
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="โปรแกรมย่อย (Subprogram or Subroutine)">โปรแกรมย่อย (Subprogram or Subroutine)</a>
+</b>
+</font>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   เป็นโปรแกรมที่สั่งให้ทำงานแตกย่ายออกไปจากโปรแกรมหลัก
+    (Main Program)
+    ซึ่งโปรแกรมย่อยจะทำหน้าที่พิเศษ
+    ซึ่งอาจจะ
+    เป็นโปรแกรมช่วยงาน
+    หรือโปรแกรมเสริมการทำงานให้กับโปรแกรมหลัก
+    และไม่จำเป็นจะต้องเป็นภาษาโปรแกรมอย่างเดียวกัน
+    อาจเป็นภาษาโปรแกรมอื่น
+    ๆ
+    ที่นำมาแปลงให้อยู่ในรูปของภาษาเครื่องฯ
+    (Machine Language หรือ Object Code)
+    และเชื่อมโปรแกรมทั้งสองเข้าด้วยกัน
+
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="จุดประสงค์ของการเขียนโปรแกรมย่อย">จุดประสงค์ของการเขียนโปรแกรมย่อย</a>
+</b>
+</td>
+</tr>
+</table>
+<ul>
+    <li>เพื่อความสะดวกและประหยัดเวลาในขั้นตอนของการทดสอบโปรแกรม
+    </li>
+    <li>สามารถทำการแก้ไขในส่วนที่ผิดพลาด
+        ภายในขั้นตอนการทำงานของโปรแกรมได้ง่าย
+    </li>
+    <li>สามารถแตกแยกส่วนของโปรแกรมที่ต้องการเขียนซ้ำหลาย
+        ๆ
+        ครั้งออกมาเขียนในครั้งเดียว
+        แล้วเวลาต้องการจะใช้ก็สามารถ
+        เรียกใช้ภายในโปรแกรมหลัก
+    </li>
+    <li>เพื่อลดความยุ่งยากในการเขียนโปรแกรม
+    </li>
+    <li>ในกรณีที่เป็นโปรแกรมใหญ่
+        ๆ
+        และต้องทำการเขียนโปรแกรมเป็นระบบ
+        โดยใช้โปรแกรมเมอร์หลาย
+        ๆ คน
+        ร่วมกันเป็นทีมในการ
+        เขียนโปรแกรมหนึ่ง ๆ
+        ก็สามารถทำได้โดยแตกย่อยโปรแกรมออกเป็นชิ้น
+        ๆ ออกไปเขียน
+        ซึ่งเป็นการทำให้โปรแกรมนั้น
+        ๆ มี
+        ประสิทธิภาพมากยิ่งขึ้น
+    </li>
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="ภาษาโคบอลกับการเขียนและเรียกใช้โปรแกรมย่อย">ภาษาโคบอลกับการเขียนและเรียกใช้โปรแกรมย่อย</a>
+</b>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ในภาษาโคบอลก็มีลักษณะเดียวกันกับภาษาโปรแกรมอื่น
+    ๆ
+    ที่สามารถเขียนแตกย่อยโปรแกรมออกเป็นส่วน
+    ๆ เพื่อการใช้งานที่มี
+    ความยืดหยุ่น
+    และมีประสิทธิภาพ
+    จากคำสั่งต่าง ๆ
+    ที่ได้ศึกษามาแล้วในตอนต้น
+    ๆ
+    จะเห็นว่าประโยคคำสั่ง
+    PERFORM
+    เป็นประโยคคำสั่งที่ให้โอนการทำงานไปยังประโยคคำสั่งที่อ้างถึง
+    ซึ่งประโยคคำสั่งที่ได้อ้างถึงนึ้น
+    อาจจะอยู่ภายในโปรแกรมย่อยภายในโปรแกรมเดียวกัน
+    หรืออาจจะอยู่ภายในคนละโปรแกรม
+    ในที่นี้หมายถึงโปรแกรมย่อย
+    เมื่อคอมพิวเตอร์ทำในประโยคคำสั่งนั้นจนเสร็จเรียบร้อยแล้ว
+    ก็จะกลับมาทำประโยคคำสั่งชุดที่อยู่ต่อจากประโยคคำสั่ง
+   PERFORM อีกครั้ง
+<p><b>โปรแกรมย่อย
+จะถูกแบ่งออกเป็น2
+ประเภทคือ</b> </p>
+
+<ul>
+    <li>โปรแกรมที่เรียกใช้
+        (Calling Program) </li>
+    <li>โปรแกรมที่ถูกเรียกใช้
+        (Called Programs) </li>
+</ul>
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+
+
+<h3>ประโยคคำสั่งที่ใช้ภายใต้การทำงานของโปรแกรมย่อย</h3>
+
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="CALL Statement">CALL Statement</a></b>
+</td>
+</tr>
+</table>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; จะทำงานคล้ายกับประโยคคำสั่ง
+PERFORM
+เพียงแต่จะแตกต่างกันที่
+PERFORM
+จะใช้ให้คอมพิวเตอร์ทำงานตามคำสั่งใน
+ประโยคคำสั่ง ส่วน CALL
+จะสั่งให้คอมพิวเตอร์ทำงานตามประโยคคำสั่งภาในส่วนของโปรแกรมย่อยที่ได้อ้างถึงจากประโยคคำสั่ง
+CALL</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ประโยคคำสั่ง CALL
+ใช้สำหรับเรียก
+หรืออ้างถึงโปรแกรมย่อยต่าง
+ๆ ที่ได้ระบุไว้ใน PROGRAM-ID
+เมื่อคอมพิวเตอร์ทำงาน
+ตามลำดับขั้นตอนจนกระทั่งถึงประโยคคำสั่ง
+CALL
+การควบคุมจะถูกส่งหรือโอนกลับไปยังจุดที่โปรแกรมเรียกใช้
+ซึ่งประโยคคำสั่ง USINGที่ตามหลังประโยคคำสั่ง
+CALL ใน Main Program และ SubProgram
+จะทำหน้าที่ควบคุมจำนวนชื่อตัวแปรให้เท่ากัน
+ระหว่างโปรแกรมทั้งสอง
+แต่ไม่จำเป็นว่าจะต้องมีชื่อที่ตรงกัน
+และชื่อแรกใน Main Program และ
+SubProgram ต้องคู่กัน</p>
+
+<table bgcolor="ffff00" border=0 width=800 aling="center">
+<tr>
+<td>
+<font size=+1>
+<b><a name="EXIT PROGRAM Statement">EXIT PROGRAM Statement</a></b>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; จะเป็นการควบคุมการทำงานกลับไปยังโปรแกรมที่เรียกใช้
+ซึ่งเป็นการบอกให้คอมพิวเตอร์ทราบว่าการทำงานภายใน
+SubProgramที่ถูกเรียกใช้ได้สิ้นสุดลงแล้ว
+และส่งการควบคุมกลับไปยัง
+Main Program
+ซึ่งเป็นโปรแกรมที่เรียกใช้
+สองคำสั่งนี้ใช้เมื่อจบประโยคคำสั่งใน
+SubProgram
+ซึ่งเมื่อคอมพิวเตอร์ทำงานตามชุดประโยคคำสั่งจนกระทั่งมาเจอประโยค
+คำสั่งนี้
+คอมพิวเตอร์ก็จะกลับเข้าไปทำงานต่อจากประโยคคำสั่ง
+CALL
+ซึ่งประโยคคำสั่งนี้ทำหน้าที่คล้ายประโยคคำสั่ง
+STOP RUN ภายในMain Program
+<center><a href="#<IMG SRC="top.gif"><IMG SRC="top.gif"></a></center>
+</body>
+
+<!-- Mirrored from cptd.chandra.ac.th/selfstud/cobol/pass8.htm by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 16 Nov 2015 19:29:52 GMT -->
+</html>
