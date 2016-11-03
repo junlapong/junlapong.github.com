@@ -15,4 +15,15 @@
 	font-style: normal;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'krungsri_con-webfont';
+    src: url('../fonts/krungsri_con-webfont.svg') format('svg');
+  }
+	
+	@font-face {
+    font-family: 'krungsri_con_med-webfont';
+    src: url('../fonts/krungsri_con_med-webfont.svg') format('svg');
+  }
+}
 
