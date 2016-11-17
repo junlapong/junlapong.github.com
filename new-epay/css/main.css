@@ -1,13 +1,13 @@
 html {
-    -pie-load-path: "http://clickplearn.com/krungsri/js/PIE/PIE_IE678.js";
+    -pie-load-path: "http://clickplearn.com/krungsri/js/PIE/PIE.js";
 }
-body {
+body { 
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 a {
-	color: #554242;
+	color: #6f5f5e;
 }
 .medFont{
 	font-family: 'krungsri_con_med-webfont';
@@ -33,7 +33,7 @@ a {
 	font-size: 14px;
 	float: left;
 }
-.wizard {©
+.wizard {
 	margin: 0 auto;
 	background: #fff;
 }
@@ -74,7 +74,9 @@ span.round-tab {
 	left: 0;
 	text-align: center;
 	font-size: 25px;	
-	background:#847373;	
+/*	background:;*/
+	background: url(../img/circle-brown.png) no-repeat center center;
+	/*behavior: url(js/pie/PIE.htc);*/
 }
 span.round-tab i {
 	color: #555555;
@@ -86,7 +88,8 @@ span.round-tab i {
 	color:#000;
 	font-size: 26px;
 	font-weight: 800;
-	background:#fcd902;
+/*	background:#fcd902;*/
+	background: url(../img/circle-yellow.png) no-repeat center center;
 }
 /*.wizard li.active span.round-tab i {
 	color: #5bc0de;
@@ -125,7 +128,7 @@ span.round-tab:hover {
 	margin: 10px auto;
 	border-radius: 100%;
 	color: #fff;
-	padding: 0;
+	padding: 0;	
 }
 .wizard .nav-tabs > li a:hover {
 	background: transparent;
@@ -146,11 +149,14 @@ span.round-tab:hover {
 .topbar {
 	border-radius: 8px 8px 0 0;
 	padding: 14px 25px 9px;
-	background: #fcd902;
+	background-color: rgb(252, 217, 2);	
 	background: -webkit-linear-gradient(#fdef11, #fcd902);
 	background: -o-linear-gradient(#fdef11, #fcd902);
 	background: -moz-linear-gradient(#fdef11, #fcd902);
 	background: linear-gradient(#fdef11, #fcd902);
+	/*-pie-background: linear-gradient(#fdef11, #fcd902);
+	behavior: url(js/pie/PIE.htc);*/
+
 }
 .topbar > h3, .topbar > h5 {
 	margin: 0;
@@ -199,7 +205,7 @@ th {
 	/*left: 0;*/	
 }
 .retail-login .txt-retail {
-	color: #322929;
+	color: #5a5a5a;
 	padding: 25px 0 0 20px;
 	font-size: 14px;
 
@@ -238,6 +244,7 @@ th {
   -webkit-text-align-last:center;
   -webkit-appearance:none;
   -moz-appearance:none;
+	appearance:none;
   color:#d6cfce;
   background:#8c7d7d;
   border:none;	
@@ -259,6 +266,12 @@ th {
     padding:0 0 2px;
     position:absolute;
     pointer-events:none;
+}
+@media \0screen {
+    .ie8 {property:value;}
+	.retail-login .labels:after{
+		content: '';
+	}
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
 	.retail-login .labels:after { 
@@ -359,16 +372,17 @@ footer {
 	width: 100%;
 	color: #fff;
 	font-size: 12px;
-	background-color: #544949;
+	background-color: #6f5f5e;
 	padding: 15px 0;
 	clear: both;
 }
-footer.login-retail {
+div.login-retail {
+	width: 100%;
 	position: fixed;
 	bottom: 0;
+	padding: 15px 0;
 	height: 15px;
-	background: #837273;
-	float:left;
+	background: #6f5f5e;
 }
 footer div {
 	margin: 0 10px;
@@ -565,7 +579,7 @@ footer ul.social li {
 	color: #837272;
 }
 ._yellow {
-	color: #ffdb00;
+	color: #ffd400;
 }
 ._darkbrown {
 	color: #544949;
@@ -638,7 +652,8 @@ hr.brown {
 	background: -o-linear-gradient(#fdef11, #fcd902);
 	background: -moz-linear-gradient(#fdef11, #fcd902);
 	background: linear-gradient(#fdef11, #fcd902);
-	-pie-background: linear-gradient(#fdef11, #fcd902);	
+	-pie-background: linear-gradient(#fdef11, #fcd902);
+	/*behavior: url(js/pie/PIE.htc);*/	
 }
 .table {
 	margin-bottom: 0;
@@ -895,7 +910,7 @@ input[type="radio"], input[type="checkbox"] {
 footer {
 	display: none;
 }
-footer.login-retail{
+div.login-retail{
 	position: absolute;
 	bottom: 0;
 	display: block;
@@ -908,7 +923,7 @@ footer.login-retail{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
   
-  footer.login-retail{
+  div.login-retail{
 	position: static;
 	bottom: 0;
 	display: block;
@@ -921,7 +936,7 @@ footer.login-retail{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-  footer.login-retail{
+  div.login-retail{
 	position:fixed;
 	bottom: 0;
 	display: block;
