@@ -1,14 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ธนาคารกรุงศรีอยุธยา จำกัด (มหาชน) - E-PAYMENT ULTIMATE YOUR PAYMENT</title>
-<meta http-equiv="refresh" content="0;URL=atm.html">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Krungsri e-Payment Redesign</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-thaisansneue.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="img/favicon.ico" type="image/x-icon" rel="icon" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/ie8.css">
+    <![endif]-->
+    <script src="js/respond.min.js"></script>
+    <style type="text/css">
+        body {
+        	font-family: 'Sukhumvit Set', 'thaisans_neueregular', sans-serif;
+            font-size: 24px;
+            margin: 10px;
+        	-webkit-font-smoothing: antialiased;
+        	-moz-osx-font-smoothing: grayscale;
+        }
+        a {
+            color: #0080a0;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #ff8040;
+        }
+    </style>
 </head>
 
 <body>
+
+<h1>Krungsri e-Payment Redesign</h1>
+<hr>
+
+<h2>Online Direct Debit</h2>
+<ul>
+    <li><input type="checkbox" checked /> <a href="login-retail.html">Login*</a> | <a href="retail.html">Flow KOL/KBOL</a></li>
+    <li><input type="checkbox" checked /> <a href="atm.html">Flow ATM</a></li>
+    <li><input type="checkbox"/> <a href="#ebpp.html">Flow EBPP (SSO)</a></li>
+</ul>
+
+<h2>Credit Card</h2>
+<ul>
+    <li><input type="checkbox"/> <a href="#card-payment.html">Flow Credit Card</a></li>
+</ul>
+<hr>
+
+<h2>Merchant Admin</h2>
+<ul>
+    <li><input type="checkbox" checked /> <a href="login-merchant.html">Merchant Login</a></li>
+    <li><input type="checkbox"/> <a href="#forgot-password.html">Forgot Password</a></li>
+    <li><input type="checkbox"/> <a href="#reset-password.html">Reset Password</a></li>
+    <li><input type="checkbox"/> <a href="security-policy.html">Security Policy Page</a> => <a href="https://www.krungsriepayment.net/cas-merchant/include/secure.jsp" target="_blank">Example</a></li>
+    <li><input type="checkbox"/> <a href="#merchant-home.html">Merchant Home</a></li>
+    <li><input type="checkbox" checked /> <a href="merchant-profile-address.html">Address</a></li>
+    <li><input type="checkbox" checked /> <a href="merchant-profile-contact.html">Contact</a></li>
+    <li><input type="checkbox" checked /> <a href="merchant-profile-information.html">Profile</a></li>
+    <li><input type="checkbox"/> <a href="#settlement.html">Settlement</a></li>
+    <li><input type="checkbox"/> <a href="#report.html">Report</a></li>
+    <li><input type="checkbox" checked /> <a href="merchant-order-search.html">Order Search</a></li>
+    <li><input type="checkbox" checked /> <a href="merchant-order-report-results.html">Order Searh Result</a></li>
+    <li><input type="checkbox" checked /> <a href="merchant-order-details.html">Order Details</a></li>
+    <li><input type="checkbox"/> <a href="#merchant-kqt-maker.html">KQT Maker</a></li>
+    <li><input type="checkbox"/> <a href="#merchant-kqt-approver.html">KQT Approver</a></li>
+    <li><input type="checkbox"/> <a href="#change-password.html">Change Password</a></li>
+</ul>
+<hr>
+
+<h2>Checklist</h2>
+
+<ul>
+    <li><input type="checkbox"/> Check Web Font MIME type</li>
+    <li><input type="checkbox"/> font face render correctly</li>
+    <li><input type="checkbox"/> favicon render correctly on Desktop/Mobile</li>
+    <li><input type="checkbox"/> Update footer contact information</li>
+    <li><input type="checkbox"/> Update footer remove social icons</li>
+    <li><input type="checkbox"/> Update footer add Symantec Logo</li>
+
+</ul>
+
+<h3>Desktop</h3>
+<ul>
+    <li><input type="checkbox" checked /> IE8+</li>
+    <li><input type="checkbox" checked /> Chrome</li>
+    <li><input type="checkbox" checked /> Safari</li>
+    <li><input type="checkbox" checked /> Firefox</li>
+</ul>
+<h3>Mobile/Tablet</h3>
+<ul>
+    <li><input type="checkbox" checked /> Chrome</li>
+    <li><input type="checkbox" checked /> Safari</li>
+</ul>
+<hr>
+
+<h2>UAT Krungsri e-Payment</h2>
+<ul>
+    <li><a href="https://www.krungsriepayment.net/EPayMerchantTestWeb" target="_blank">EPayMerchantTestWeb</a></li>
+    <li><a href="https://www.krungsriepayment.net/EPayMerchantAdminWeb" target="_blank">EPayMerchantAdminWeb</a></li>
+    <li><a href="https://www.krungsriepayment.net/EPayWeb" target="_blank">EPayWeb</a></li>
+</ul>
+
+<h2>Symantec Logo</h2>
+<!-- START --->
+<table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+<tr>
+<td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=www.krungsriepayment.com&amp;size=XS&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><br />
+<a href="http://www.symantec.com/ssl-certificates" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL CERTIFICATES</a></td>
+</tr>
+</table>
+<!-- END--->
+
+<a href="https://www.symantec.com/ssl/seal-agreement/install.jsp" target="_blank">https://www.symantec.com/ssl/seal-agreement/install.jsp</a>
 
 </body>
 </html>
