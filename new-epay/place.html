@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name = "viewport" content = "width = device-width">
+<meta name = "viewport" content = "initial-scale = 1.1, user-scalable = yes">
+
+
+<head>
+<title>Page Title</title>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-1.11.3.min.js"></script> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.js"></script> 
+<script src="js/jquery.fittext.js"></script> 
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+	
+	//pinpad
+        if ($("#txtYear").val() != "") {
+            $("#txtYear").next().addClass('stay');
+        }
+        
+		
+$("#lblYear").on('click', function () {
+
+            $('#txtYear').focus();
+        });
+		
+		
+		$("#txtYear").on('blur', function () {
+            if ($("#txtYear").val() != "") {
+                $(this).next().addClass('stay');
+            } else {
+                $(this).next().removeClass('stay');
+            }
+        });
+		});
+		
+		
+</script>
+<style>
+.textPlaceholder{cursor:text;color:#a2a2a0;transition:.15s ease-out all;position:absolute;top:2.6em;left:2.5em}
+
+input[type=text].BizFormFill {
+    padding: 1.8em 0 .8em 1em;
+}
+
+input[type=text].BizFormFill {
+    background-color: #ece9e9;
+    margin: 10px 0;
+	    padding-top: 0px;
+    padding-bottom: 0;
+    width: 100%;
+    border-radius: 10px;
+}
+input[type=text].BizFormFill {
+    border: 1px solid transparent;
+    height: 70px;
+    padding-left: 15px;
+}
+ #txtYear:focus + #lblYear, #lblYear.stay{
+            top: 1.8em;
+            left: 2.8em;
+            font-size: .8em;
+            font-weight: bold;
+            color: #a2a2a0;
+            position: absolute;
+            transition: .15s ease-out all;
+			
+			
+			
+			cursor: text;
+        }
+		#txtYear
+		{
+		background: #ece9e9 url(img/ig.png) left no-repeat;
+    padding-left: 2.5em;
+		}
+		
+</style>
+</head>
+<body>
+
+<div class="inner">
+                           
+                            <input name="p$lt$ctl03$pageplaceholder$p$lt$ctl00$InsuranceFormCar$txtYear" type="text" maxlength="" id="txtYear" class="BizFormFill WatermarkText" autocomplete="off">
+                            <span id="lblYear" class="textPlaceholder">กรอกชื่อ<span class="star">*</span></span></div>
+                        </div>
+						
+						</body>
+						</html>

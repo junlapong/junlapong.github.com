@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ธนาคารกรุงศรีอยุธยา จำกัด (มหาชน) - E-PAYMENT ULTIMATE YOUR PAYMENT</title>
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+	
+    <link href="css/main.css" rel="stylesheet">
+    <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link href="img/favicon.ico" type="image/x-icon" rel="icon"/>
+    
+  </head>
+  <body>
+    <div class="navbar">
+        <div class="col-sm-3 col-xs-5" style="padding:0px 0px;">
+          <div class="col-lg-10 col-md-10 col-sm-9 col-xs-7 _relative topleft" > 
+            
+              <div class="logoepay">
+                <img src="img/logo-epayment.png" class="img-responsive" alt="" style="vertical-align: middle;"> 
+              </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1 bg-gradient" ></div>
+        </div>
+        
+        
+        
+        <div class="col-sm-9 col-xs-7" style="padding: 0px 0px;">
+          <div class="col-sm-9 col-xs-7 tilteepay" >E-Payment</div>
+          <div class="col-sm-3 col-xs-5">
+            <ul class="langselector">
+              <li class="lifirst" >
+                <a class="first" href="#">TH</a>
+                <ul>
+                  <li>
+                    <a>EN</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+    </div>
+    
+    <!-- CONTENT -->
+    <div class="container">
+      
+      <section>
+        <div class="col-xs-12 wizard">
+          <div class="wizard-inner">
+            
+            <ul class="nav nav-tabs progressbar" role="tablist">
+              <li class="active"><a href="#step1" data-toggle="tab" aria-controls="step1" role="tab"><span>เลือกช่องทาง</span></a> </li>
+              <li class="disabled"><a href="#step2" data-toggle="tab" aria-controls="step2" role="tab"><span>เลือกบัญชี</span></a> </li>
+              <li class="disabled"><a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span>รหัสยืนยัน</span></a> </li>
+              <li class="disabled"><a href="#complete" data-toggle="tab" aria-controls="step4" role="tab"><span>สถานะ</span></a> </li>
+            </ul>
+            
+            
+            
+          </div>
+          
+          
+          <form role="form">
+            <div class="tab-content">
+              
+              <div class="tab-pane active" role="tabpanel" id="step1">
+                <div class="step-title">เลือกช่องทางในการชำระเงิน</div>
+                
+                <div class="col-sm-12 col-xs-12 selecttype">
+                  <div class="col-sm-4 col-xs-6 width-m">
+                    <div class="paytype">
+                      <span class="item-online" ></span>
+                      <button type="button" class="online btn">กรุงศรี ออนไลน์</button>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-xs-6 width-m">
+                    <div class="paytype ">
+                      <span class="item-bizonline"></span>
+                      <button type="button" class="bizonline btn">กรุงศรี บิซ ออนไลน์</button>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-xs-6 width-m">
+                    <div class="paytype ">
+                      <span class="item-atm"></span>
+                      <button type="button" class="atm btn">เอทีเอ็ม</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="zonecontent">
+                  
+                  <div class="content step1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    
+                    <div class="innercontent">
+					<div class="typeremark">
+					<span id="login-online">เข้าสู่ระบบด้วยกรุงศรี ออนไลน์</span>
+					</div>
+					<div class="typeremark">
+					<span id="login-bizonline">เข้าสู่ระบบด้วยกรุงศรี บิซ ออนไลน์</span>
+					</div>
+                      <div id="group-online">
+                        <div class="item col-xs-12 col-sm-12 col-lg-12">
+                          <div class="inner">
+                            <input type="text" maxlength="" id="txtid" class="BizFormFill WatermarkText" autocomplete="off"/>
+                            <div id="lblid" class="textPlaceholder">รหัสประจำตัว</div>
+                            <div class="vd">
+                              <img src="img/payment-error-icon.png" class="img-responsive vd-img" /> 
+                            </div>
+                            <!--span class="validatetext">error</span-->
+                          </div>
+                        </div>
+                        <div class="item col-xs-12 col-sm-12 ">
+                          <div class="inner">
+                            <input type="text" maxlength="" id="txtpass" class="BizFormFill WatermarkText" autocomplete="off"/>
+                            <div id="lblpass" class="textPlaceholder">รหัสผ่าน</div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 _forgotpass" >
+                          <a class="forgotpass" target="_blank">ลืมรหัสผ่าน</a>
+                        </div>
+                      </div>
+                      <div id="group-atm">
+					  <div class="typeremark">
+					  <span>เข้าสู่ระบบด้วยบัตร ATM</span>
+					  </div>
+                        <div class="item col-xs-12 col-sm-12 ">
+                          <div class="inner">
+                            <input type="text" maxlength="" id="txtatm" class="BizFormFill WatermarkText" autocomplete="off"/>
+                            <div id="lblatm" class="textPlaceholder">ATM</div>
+                          </div>
+                        </div>
+                        <div class="item col-xs-12 col-sm-12 ">
+                          <div class="inner">
+                            <input type="text" maxlength="" id="txtpin" class="BizFormFill WatermarkText" autocomplete="off"/>
+                            <div id="lblpin" class="textPlaceholder">PIN</div>
+                          </div>
+                        </div>
+                      </div>
+                      <nav>
+                        <ul class="pager">
+                          <li class="next">
+                            <button type="button" class="btn btn-main next-step btn-yellow">เข้าสู่ระบบ</button>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane " role="tabpanel" id="step2">
+                <div class="step-title">เลือกบัญชีที่ต้องการชำระ</div>
+                <div class="zonecontent">
+                  
+                  <div class="content step2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    
+                    <div class="obj1" >
+                      <div class="innercontent2 col-sm-12 col-xs-12" style="padding: 0px 0px;">
+                        <div class="objtitle">ข้อมูลการซื้อสินค้า</div>
+                        <div>
+                          <div class="col-sm-12 col-xs-12" >
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Merchant Name</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>Test E-pay (E-Clearing)</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Order No.</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>201410080000004</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Transaction Date/Time</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>08/10/2014 11:42:30</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Reference No.</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>999999999</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12" style="padding-bottom: 20px;">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Order Amount</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft _blue">
+                              <p>6.00 THB</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="obj2" style="background:#fff;clear: both;border-radius: 0px 0px 10px 10px;">
+                      <div class="innercontent">
+                        <div class="objtitle">เลือกบัญชีที่ต้องการชำระ</div>
+                        <div class="hwcCustomization">
+                          <select >
+                            <option>777-7777-2345</option>
+                          </select>
+                        </div>
+                        <div>
+                          <p>หมายเลขโทรศัพท์มือถือ 086-777-9999</p>
+                        </div>
+                        
+                        
+                        <nav>
+                          <ul class="pager">
+                            <li class="next">
+                              <button type="button" class="btn btn-main next-step btn-yellow">ถัดไป</button>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="innercontent">
+                    <nav class="mg100">
+                      <ul class="pager">
+                        <li class="previous">
+                          <button type="button" class="btn btn-main prev-step btn-gray">กลับ</button>
+                          &nbsp;&nbsp;&nbsp; 
+                          <a class="btn-cancle">ยกเลิก</a>
+                        </li>
+                        
+                        
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane " role="tabpanel" id="step3">
+                <div class="step-title">กรอกรหัสยืนยัน</div>
+                <div class="zonecontent">
+                  <div class="content step3 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    
+                    <div class="innercontent">
+                      
+                      
+                      <div class="item col-xs-12 col-sm-12 col-lg-12">
+                        <div class="inner">
+                          <input type="text" maxlength="" id="txtotp" class="BizFormFill WatermarkText" autocomplete="off"/>
+                          <div id="lblotp" class="textPlaceholder">กรอกรหัส OTP</div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 sentotp" >
+                        <a class="resentotp">ขอรหัส OTP ใหม่</a>
+                      </div>
+                      
+                      <nav>
+                        <ul class="pager">
+                          <li class="next">
+                            <button type="button" class="btn btn-main next-step btn-yellow">ถัดไป</button>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                  
+                  <div class="remark">
+                    เงื่อนไข: OTP At vero eos et accusamus et iusto odio diqnissimosducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint ocaecaticupiditate non provident, similiq ue sunt in culpa qui offciadeserunt mollitia animi, id est laborum et doloru mfuga. Et harum
+                  </div>
+                  <nav class="mg100">
+                    <ul class="pager">
+                      <li class="previous">
+                        <button type="button" class="btn btn-main prev-step btn-gray">กลับ</button>
+                        <a class="btn-cancle">ยกเลิก</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="tab-pane " role="tabpanel" id="complete" >
+                <div class="step-title">สถานะการชำระเงิน</div>
+                <div class="zonecontent">
+                  <div class="content step4 col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                    <div class="innercontent2" style="padding:0px 0px;">
+                      <div>
+                        <img src="img/icon-success.png" />
+						<!--img src="img/payment-fail-icon" /-->
+                      </div>
+                      <div class="txtsuccess">
+                        Transaction successful.
+                      </div>
+                      <div >
+                        <div class="col-sm-12 col-xs-12">
+                          <div class="col-sm-6 col-xs-6 txtright txt_left">
+                            <p>Merchant Name</p>
+                          </div>
+                          <div class="col-sm-6 col-xs-6 txtleft">
+                            <p>Test E-pay (E-Clearing)</p>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12">
+                          <div class="col-sm-6 col-xs-6 txtright txt_left">
+                            <p>Order No.</p>
+                          </div>
+                          <div class="col-sm-6 col-xs-6 txtleft">
+                            <p>201410080000004</p>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12">
+                          <div class="col-sm-6 col-xs-6 txtright txt_left">
+                            <p>Transaction Date/Time</p>
+                          </div>
+                          <div class="col-sm-6 col-xs-6 txtleft">
+                            <p>08/10/2014 11:42:30</p>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12">
+                          <div class="col-sm-6 col-xs-6 txtright txt_left">
+                            <p>Reference no.</p>
+                          </div>
+                          <div class="col-sm-6 col-xs-6 txtleft">
+                            <p>99999999</p>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12">
+                          <div class="col-sm-6 col-xs-6 txtright txt_left">
+                            <p>Order Amount</p>
+                          </div>
+                          <div class="col-sm-6 col-xs-6 txtleft _blue" >
+                            <p>6.00 THB</p>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                     <div class="innercontent2" > 
+                      
+                      <nav >
+                        <ul class="pager">
+                          <li>
+                            <button type="button" class="btn btn-main btn-yellow">กลับหน้าร้านค้า</button>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="col-sm-12 col-xs-12" style="text-align:center;">
+          <div>
+            <p>
+              <span>ติดต่อเรา | </span>
+              
+              <span>Credit Card Merchant Control and Services Unit</span>
+              
+              <span>Tel: 0-2296-4015 </span>
+              
+              <span>email: cmerserv@krungsri.com</span>
+			</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-xs-12" style="text-align:center;">
+          A member of   MUFG, a global Financial group
+        </div>
+      </div>
+    </div>
+	
+    <div class="container-fluid _bgYellow"></div>
+    <script src="js/jquery-1.11.3.min.js"></script> 
+    
+    <script src="js/bootstrap.js"></script> 
+    <script src="js/jquery.fittext.js"></script> 
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
+    <script src="js/jquery.dd.js" type="text/javascript"></script>
+    
+  </body>
+</html>
