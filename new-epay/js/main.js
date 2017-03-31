@@ -28,7 +28,7 @@ $(document).ready(function () {
 
     });
 	
-	//set dropdown
+        //set dropdown
         $("select").msDropdown();
         
         $('.item-online').addClass("check");
@@ -149,7 +149,6 @@ $(document).ready(function () {
 		  $("#group-atm").show();
         });
         
-        
         var m1 = $("#txtatm");
         var m1Value = m1.val();
         m1.mask("9999-9999-9999-9999");
@@ -160,11 +159,11 @@ $(document).ready(function () {
         }
 });
 
-
 function nextTab(elem) {
 		"use strict";		
     $(elem).next().find('a[data-toggle="tab"]').click();
 }
+
 function prevTab(elem) {
 		"use strict";		
     $(elem).prev().find('a[data-toggle="tab"]').click();
@@ -204,7 +203,4 @@ function prevTab(elem) {
 										}
 		);
 				
-				
-				
-        
-})(jQuery);		
+})(jQuery);

@@ -20,7 +20,8 @@ left: 100px;
 z-index: 1;
 }
 .tilteepay{
-font-size:20px;
+font-size:24px;
+font-weight: 600;
 line-height: 65px;
 padding: 0px 0px;
 }
@@ -1537,11 +1538,13 @@ cursor:pointer;
 .remark{
 padding-bottom: 30px;
 }
-.validatetext{
-float: left;
-color: red;
-margin: 0px 0px 0px 15px;
+
+.validate-msg {
+	float: left;
+	color: red;
+	margin: 0px 0px 0px 15px;
 }
+
 .vd{
 float: right;
 clear: both;
