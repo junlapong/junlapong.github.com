@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+span.round-tab {
+	background:url(../img/circle-brown.png) no-repeat center center;
+}
+.wizard li.active span.round-tab {
+	background:url(../img/circle-yellow.png) no-repeat center center;
+}
+
+@media screen and (max-width: 800px) {
+	span.round-tab {
+		background-size:28px 28px;
+		background:url(../img/circle-brown.png) no-repeat center center;
+	}
+	.wizard li.active span.round-tab {
+		background-size:28px 28px;
+		background:url(../img/circle-yellow.png) no-repeat center center;
+	}
+}

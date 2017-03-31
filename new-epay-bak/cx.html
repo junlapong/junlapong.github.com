@@ -1,0 +1,54 @@
+<!-- <script src="js/rollups/hmac-sha256.js"></script> -->
+<!-- <script src="js/components/enc-base64-min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+
+<script>
+  var user = "supatthra.p@softdebut.com";
+  var apiKey = "api&user&Wg+4tCORc1UxS809qjt1Cg==";
+  var apiUrl = "https://api.cxense.com/profile/content/push";
+  var pushurl = "https://www.krungsri.com/bank/th/All-Promotion/Personal-Promotions/yellow-points-rilakkuma.html";
+
+  var date = (new Date()).toISOString();
+  var hash = CryptoJS.HmacSHA256(apiKey, date);
+  var hmac = CryptoJS.enc.Hex.stringify(hash);
+
+  hmac = hmac.toUpperCase();
+  //hmac = hmac.substring(0, 32);
+  console.log(hmac);
+
+  var xAuthenHeader = "username=" + user + " date=" + date + " hmac-sha256-hex=" + hmac;
+  var query = "{\"url\":\"" + pushurl + "\"}";
+
+  console.log(date);
+  console.log(xAuthenHeader);
+  console.log(query);
+
+  var response = callApi();
+  // response = JSON.parse(response);
+  console.log(response);
+  document.write(response);
+
+//------------------------------------------------------------------------------
+
+  function callApi() {
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("POST", apiUrl, false);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      // xhttp.setRequestHeader("Content-type", "application/json");
+      xhttp.setRequestHeader("X-cXense-Authentication", xAuthenHeader);
+
+      xhttp.onreadystatechange = function() {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+              console.log(xhttp.responseText);
+          }
+      }
+
+      xhttp.send(query);
+      var response = xhttp.responseText;
+
+      return response;
+  }
+
+</script>
