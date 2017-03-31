@@ -23,17 +23,18 @@ font-family: 'krungsri_con_med-webfont';
 .title {
 position: absolute;
 top: 52px;
-left: 100px;
+left: 50px;
 z-index: 1;
 }
 .tilteepay{
-font-size:24px;
-font-weight: 600;
+font-size: 30px; /*edit*/
+font-weight: bold; /*edit*/
 line-height: 65px;
 padding: 0px 0px;
+color: #ffffff; /*edit*/
 }
 .logoepay{
-	float:right;
+float:right;
 display: inline-block;
 height: 65px;
 vertical-align: middle;
