@@ -6,7 +6,14 @@ font-family: 'krungsri_con-webfont';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-
+hr.style14 { 
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+} /*edit*/
 a {
 color: #6f5f5e;
 }
@@ -189,7 +196,7 @@ padding-top: 20px;
 }
 .wizard .tab-pane .zonecontent{
 
-width: 90%;
+width: 100%; /*edit*/
 float: none;
 margin: 0 auto;
 clear:both;
@@ -197,12 +204,12 @@ clear:both;
 }
 .wizard .tab-pane .content{
 
-border: 1px solid #eaeaea;
-border-radius: 10px;
+/*border: 1px solid #eaeaea;
+border-radius: 10px;*/
 text-align:center;
--webkit-box-shadow: 0 3px 20px 3px #dbdbdb;
+/*-webkit-box-shadow: 0 3px 20px 3px #dbdbdb;
 -moz-box-shadow: 0 3px 20px 3pxx #dbdbdb;
-box-shadow: 0 3px 20px 3px #dbdbdb;
+box-shadow: 0 3px 20px 3px #dbdbdb;*/
 }
 .wizard .tab-pane .obj1{
 margin: 0 auto;
@@ -231,7 +238,7 @@ margin-bottom: 120px;
 margin-bottom: 45px;
 }
 .wizard .tab-pane .content .innercontent{
-	margin-top:30px;
+margin-top:0px; /*edit*/
 padding: 5px 20%;
 }
 .wizard .tab-pane .content .innercontent2{
