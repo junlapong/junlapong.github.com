@@ -27,7 +27,7 @@ left: 50px;
 z-index: 1;
 }
 .tilteepay{
-font-size: 30px; /*edit*/
+font-size: 23px; /*edit to 23*/
 font-weight: bold; /*edit*/
 line-height: 65px;
 padding: 0px 0px;
@@ -40,7 +40,9 @@ height: 65px;
 vertical-align: middle;
 }
 .logoepay img{
-	display: inline-block;
+display: inline-block;
+max-width: 100%;
+height: auto;
 }
 .topleft{
 background-size: 100%;
