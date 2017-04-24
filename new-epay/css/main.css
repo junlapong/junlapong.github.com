@@ -31,7 +31,7 @@ font-size: 22px; /*edit to 22*/
 font-weight: bold; /*edit*/
 line-height: 65px;
 padding: 0px 0px;
-color: #ffffff; /*edit*/
+color: #6f5f5e; /*edit*/
 }
 .logoepay{
 float:right;
@@ -1446,22 +1446,29 @@ position: absolute;
 top: 2.1em;
 left: 3.4em;/*3*/
 }
-input[type=text].BizFormFill {
-padding: 1.8em 0 .8em 1em;
-background-color: #ece9e9;
-margin: 5px 0;
-padding-top: 0px;
-padding-bottom: 0;
-width: 100%;
-border: 1px solid #dddbdc;
-height: 58px;
-padding-left: 2.7em;
-padding-top: 20px;
-font-size:16px;
+
+input[type=text].BizFormFill, input[type=password].BizFormFill {
+	padding: 1.8em 0 .8em 1em;
+	background-color: #ece9e9;
+	margin: 5px 0;
+	padding-top: 0px;
+	padding-bottom: 0;
+	width: 100%;
+	border: 1px solid #dddbdc;
+	height: 58px;
+	padding-left: 2.7em;
+	padding-top: 20px;
+	font-size:16px;
 }
+
 input[type=text].BizFormFill:focus {
-border: 1px solid #ffdb00;
+	border: 1px solid #ffdb00;
 }
+
+input[type=password].BizFormFill:focus {
+	border: 1px solid #ffdb00;
+}
+
 #txtid:focus + #lblid, #lblid.stay , #txtpass:focus + #lblpass, #lblpass.stay,#txtatm:focus + #lblatm, #lblatm.stay , #txtpin:focus + #lblpin, #lblpin.stay, #txtotp:focus + #lblotp, #lblotp.stay{
 /*top: 1.5em;*/
 left: 4em;/*3.8*/
@@ -1522,11 +1529,19 @@ text-align:left;
 .txtright{
 text-align:right;
 }
-.txtsuccess{
-color: #029626;
-font-size: 22px;
-margin: 15px 0px;
+
+.txtsuccess {
+	color: #029626;
+	font-size: 22px;
+	margin: 15px 0px;
 }
+
+.txtfail {
+	color: red;
+	font-size: 22px;
+	margin: 15px 0px;
+}
+
 .sentotp{
 text-align: right;
 margin: 0px 0px 5px 0px;

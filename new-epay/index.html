@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Krungsri e-Payment</title>
-
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -20,8 +19,8 @@
               <div class="logoepay hidden-xs">
                 <img src="img/logo-epayment.png" class="img-responsive" style="vertical-align: middle;"> 
               </div>
-			  <div class="logoepay visible-xs">
-                <img src="img/logo-epayment-2.jpg" class="img-responsive" style="vertical-align: middle;"> 
+              <div class="logoepay visible-xs">
+                <img src="img/logo-epayment-2.png" class="img-responsive" style="vertical-align: middle;"> 
               </div>
           </div>
           
@@ -65,7 +64,7 @@
             <div class="tab-content">
               
               <div class="tab-pane active" role="tabpanel" id="step1">
-                <div class="step-title">Login by</div>
+                <div class="step-title">Login</div>
                 <div class="col-sm-12 col-xs-12 selecttype">
                   <div class="col-sm-4 col-xs-6 width-m">
                     <div class="paytype">
@@ -107,7 +106,7 @@
 						</div>
                         <div class="item col-xs-12 col-sm-12 col-lg-12">
                           <div class="inner">
-                            <input type="text" maxlength="20" id="txtid" class="BizFormFill WatermarkText" autocomplete="off"/>
+                            <input type="text" id="txtid" class="BizFormFill WatermarkText" maxlength="20" autocomplete="off"/>
                             <div id="lblid" class="textPlaceholder">Username</div>
                             <div class="vd">
                               <img src="img/payment-error-icon.png" class="img-responsive vd-img" /> 
@@ -116,7 +115,7 @@
                         </div>
                         <div class="item col-xs-12 col-sm-12 ">
                           <div class="inner">
-                            <input type="text" maxlength="" id="txtpass" class="BizFormFill WatermarkText" autocomplete="off"/>
+                            <input type="password" id="txtpass" class="BizFormFill WatermarkText" maxlength="32" autocomplete="off"/>
                             <div id="lblpass" class="textPlaceholder">Password</div>
                           </div>
                         </div>
@@ -136,13 +135,13 @@
                         </div>
                         <div class="item col-xs-12 col-sm-12 ">
                           <div class="inner">
-                            <input type="text" maxlength="" id="txtatm" class="BizFormFill WatermarkText" autocomplete="off"/>
+                            <input type="text" id="txtatm" class="BizFormFill WatermarkText" maxlength="16" autocomplete="off"/>
                             <div id="lblatm" class="textPlaceholder">ATM</div>
                           </div>
                         </div>
                         <div class="item col-xs-12 col-sm-12 ">
                           <div class="inner">
-                            <input type="text" maxlength="" id="txtpin" class="BizFormFill WatermarkText" autocomplete="off"/>
+                            <input type="password" id="txtpin" class="BizFormFill WatermarkText" maxlength="6" autocomplete="off"/>
                             <div id="lblpin" class="textPlaceholder">PIN</div>
                           </div>
                         </div>
@@ -200,7 +199,7 @@
                               <p>Transaction Date</p>
                             </div>
                             <div class="col-sm-6 col-xs-6 txtleft">
-                              <p>06/02/2017 23:59:59 ICT</p>
+                              <p>06/02/2017 23:59:59</p>
                             </div>
                           </div>
                           <div class="col-sm-12 col-xs-12">
@@ -300,7 +299,7 @@
                               <p>Transaction Date</p>
                             </div>
                             <div class="col-sm-6 col-xs-6 txtleft">
-                              <p>06/02/2017 23:59:59 ICT</p>
+                              <p>06/02/2017 23:59:59</p>
                             </div>
                           </div>
                           <div class="col-sm-12 col-xs-12">
@@ -335,6 +334,7 @@
                               <p>20.00 THB</p>
                             </div>
                           </div>
+						  <!--
                           <div class="col-sm-12 col-xs-12"">
                             <div class="col-sm-6 col-xs-6 txtright txt_left">
                               <p>Communication Fee</p>
@@ -343,6 +343,7 @@
                               <p>0.00 THB</p>
                             </div>
                           </div>
+						  -->
                           <div class="col-sm-12 col-xs-12" style="padding-bottom: 20px;">
                             <div class="col-sm-6 col-xs-6 txtright txt_left">
                               <p>Total Amount</p>
@@ -412,11 +413,14 @@
                 <div class="zonecontent">
                   <div class="content step4 col-lg-12 col-md-12 col-sm-12 col-xs-12" >
                     <div class="innercontent2" style="padding:0px 0px;">
+					  <!--
                       <div>
                         <img src="img/icon-result-success.png" />
-						            <img src="img/icon-result-fail.png" />
+						<img src="img/icon-result-fail.png" />
                       </div>
+					  -->
                       <div class="txtsuccess">Transaction successful.</div>
+					  <div class="txtfail">Transaction fail.</div>
                       <div >
                         <div class="col-sm-12 col-xs-12">
                           <div class="col-sm-6 col-xs-6 txtright txt_left">
@@ -439,7 +443,7 @@
                             <p>Transaction Date</p>
                           </div>
                           <div class="col-sm-6 col-xs-6 txtleft">
-                            <p>06/02/2017 23:59:59 ICT</p>
+                            <p>06/02/2017 23:59:592017-04-24</p>
                           </div>
                         </div>
                         <div class="col-sm-12 col-xs-12">
@@ -466,6 +470,7 @@
                               <p>20.00 THB</p>
                             </div>
                           </div>
+						  <!--
                           <div class="col-sm-12 col-xs-12"">
                             <div class="col-sm-6 col-xs-6 txtright txt_left">
                               <p>Communication Fee</p>
@@ -474,7 +479,8 @@
                               <p>0.00 THB</p>
                             </div>
                           </div>
-                          <div class="col-sm-12 col-xs-12" style="padding-bottom: 20px;">
+						  -->
+                          <div class="col-sm-12 col-xs-12">
                             <div class="col-sm-6 col-xs-6 txtright txt_left">
                               <p>Total Amount</p>
                             </div>
@@ -482,6 +488,16 @@
                               <p>1,592.00 THB</p>
                             </div>
                           </div>
+
+                          <div class="col-sm-12 col-xs-12">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Reject reason</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p style="color: red">74-Account is held, contact bank</p>
+                            </div>
+                          </div>
+
                       </div>
                       </div>
                      <div class="innercontent2" > 
@@ -504,19 +520,20 @@
         </div>
       </section>
     </div>
+
     <div class="footer">
       <div class="container">
         <div class="col-sm-12 col-xs-12" style="text-align:center;">
           <div>
             <p>
-              <span>Contact Us | </span>
-              <span>Tel: 0-2296-4555 press 3 and 3 | </span>              
+              <span>Contact us </span>
+              <span>Tel: 66-2296-4555 press 1 and 3 | </span>              
               <span>email: krungsri_authorization@krungsri.com</span>
-			      </p>
+			</p>
           </div>
         </div>
         <div class="col-sm-12 col-xs-12" style="text-align:center;">
-          A member of <img src="img/logo_mufg.png" alt="" style="margin-top: -1px;"> MUFG, a global financial group
+          A member of <img src="img/logo_mufg.png" style="margin-top: -1px;"> MUFG, a global financial group
         </div>
       </div>
     </div>
