@@ -203,7 +203,7 @@ margin:0 auto;
 .wizard .tab-pane .step-title{
 font-size:20px;
 text-align:center;
-padding-bottom: 20px;
+padding-bottom: 0px;
 color:#6d5f5c;
 }
 .wizard #step2 .step-title{
@@ -1557,13 +1557,13 @@ text-align:right;
 
 .txtsuccess {
 	color: #029626;
-	font-size: 22px;
+	font-size: 16px;
 	margin: 15px 0px;
 }
 
 .txtfail {
 	color: red;
-	font-size: 22px;
+	font-size: 16px;
 	margin: 15px 0px;
 }
 
