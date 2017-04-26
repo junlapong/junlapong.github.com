@@ -248,13 +248,14 @@
                 </div>
               </div>
 
-              <div class="tab-pane" role="tabpanel" id="step3">
+			  <!-- START STEP 3 -->
+			  <div class="tab-pane" role="tabpanel" id="step3">
+
                 <div class="step-title">Confirm OTP</div>
-                <div class="zonecontent">
-                  
-                  <div class="content step3 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    
-                    <div class="obj1" >
+
+                <div class="zonecontent">                  
+                  <div class="content step2 col-lg-12 col-md-12 col-sm-12 col-xs-12">                    
+                    <div class="obj1">
                       <div class="innercontent2 col-sm-12 col-xs-12" style="padding: 0px 0px;">
                         <div class="objtitle">Payment Information</div>
                         <div>
@@ -314,16 +315,6 @@
                               <p>20.00 THB</p>
                             </div>
                           </div>
-						  <!--
-                          <div class="col-sm-12 col-xs-12"">
-                            <div class="col-sm-6 col-xs-6 txtright txt_left">
-                              <p>Communication Fee</p>
-                            </div>
-                            <div class="col-sm-6 col-xs-6 txtleft">
-                              <p>0.00 THB</p>
-                            </div>
-                          </div>
-						  -->
                           <div class="col-sm-12 col-xs-12" style="padding-bottom: 20px;">
                             <div class="col-sm-6 col-xs-6 txtright txt_left">
                               <p>Total Amount</p>
@@ -354,13 +345,6 @@
                           <div id="lblotp" class="textPlaceholder">OTP Code</div>
                         </div>
                       </div>
-
-                      <!--
-                      <div class="col-xs-12 col-sm-12 sentotp" >
-                        <a class="resentotp">Request new OTP</a>
-                      </div>
-                      -->
-
                       <nav>
                         <ul class="pager">
                           <li class="next">
@@ -382,11 +366,134 @@
                       </ul>
                     </nav>
                   </div>
+
+
                 </div>
               </div>
 
+			  <!-- END STEP 3 -->
 
               <!-- STATUS -->
+
+			  <div class="tab-pane" role="tabpanel" id="complete">
+
+                <div class="step-title">Payment Status</div>
+
+                <div class="content">
+
+                      <!--
+                      <div>
+                        <img src="img/icon-result-success.png" />
+                        <img src="img/icon-result-fail.png" />
+                      </div>
+                      -->
+                      <div class="txtsuccess">Transaction successful.</div>
+                      <div class="txtfail">Transaction fail.</div>
+
+                </div>
+
+                <div class="zonecontent">                  
+                  <div class="content step2 col-lg-12 col-md-12 col-sm-12 col-xs-12">                    
+                    <div class="obj1">
+                      <div class="innercontent2 col-sm-12 col-xs-12" style="padding: 0px 0px;">
+                        <div class="objtitle">Payment Information</div>
+                        <div>
+                          <div class="col-sm-12 col-xs-12" >
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Merchant Name</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>KRUNGSRI SHOP</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Order No.</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>201702060000001</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Transaction Date</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>06/02/2017 23:59:59</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Reference No.</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>90001572</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Pay from account</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>777-7777-2345</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12"">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Order Amount</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>1,572.00 THB</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12"">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Transaction Fee</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p>20.00 THB</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-xs-12"">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Total Amount</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft _blue">
+                              <p>1,592.00 THB</p>
+                            </div>
+                          </div>
+
+						  <div class="col-sm-12 col-xs-12" style="padding-bottom: 20px;">
+                            <div class="col-sm-6 col-xs-6 txtright txt_left">
+                              <p>Reject reason</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 txtleft">
+                              <p style="color:red">74-Account is held, contact bank</p>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="obj2" style="background:#fff;clear: both;border-radius: 0px 0px 10px 10px;">
+                    <hr class="style14">
+                    <div class="innercontent2">
+
+                      <nav >
+                        <ul class="pager">
+                          <li>
+                            <button type="button" class="btn btn-main btn-yellow">Back to Merchant</button>
+                          </li>
+                        </ul>
+                      </nav>
+
+                    </div>
+                    </div>
+					</div>
+                </div>
+              </div>
+
 
               <div class="tab-pane" role="tabpanel" id="complete">
                 <div class="step-title">Payment Status</div>
@@ -457,16 +564,6 @@
                               <p>20.00 THB</p>
                             </div>
                           </div>
-                          <!--
-                          <div class="col-sm-12 col-xs-12"">
-                            <div class="col-sm-6 col-xs-6 txtright txt_left">
-                              <p>Communication Fee</p>
-                            </div>
-                            <div class="col-sm-6 col-xs-6 txtleft">
-                              <p>0.00 THB</p>
-                            </div>
-                          </div>
-                          -->
                           <div class="col-sm-12 col-xs-12">
                             <div class="col-sm-6 col-xs-6 txtright txt_left">
                               <p>Total Amount</p>
