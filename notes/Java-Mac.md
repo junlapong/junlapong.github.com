@@ -1,5 +1,5 @@
-Install Java 8 on OS X
-======================
+Install Java 8 on macOS
+=======================
 
 [sdk](http://sdkman.io/sdks.html)
 
@@ -18,6 +18,14 @@ java version "1.8.0_131"
 Java(TM) SE Runtime Environment (build 1.8.0_131-b11)
 Java HotSpot(TM) 64-Bit Server VM (build 25.131-b11, mixed mode)
 ```
+
+Install [JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
+
+```
+sudo cp -p US_export_policy.jar /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/security
+sudo cp -p local_policy.jar /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/security
+```
+
 
 Install jEnv:
 
