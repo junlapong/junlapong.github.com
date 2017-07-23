@@ -7,6 +7,13 @@ Git Notes
 2. [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
 
 
+## Checkout Git Sub Directory
+```
+svn ls https://github.com/spotify/apollo/trunk/examples
+svn checkout https://github.com/spotify/apollo/trunk/examples
+```
+
+
 ## How to update a fork directly from GitHub
 
 1. Open your fork on GitHub.
