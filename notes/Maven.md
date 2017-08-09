@@ -53,7 +53,7 @@ mvn dependency:purge-local-repository -DreResolve=false
 or
 mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false
 ```
-### Miscellaneous
+### check dependency
 ```
 mvn dependency:tree
 mvn versions:display-dependency-updates
@@ -70,4 +70,19 @@ mvn tomcat7:undeploy
 ### maven eclipse
 ```
 mvn eclipse:eclipse
+```
+
+### Exclude lib from war
+
+```xml
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 ```
