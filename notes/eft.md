@@ -5,7 +5,7 @@ Electronic Financial Transaction (EFT) refers to a process by which money is tra
 The individuals or governments or businesses using them authorize these electronic transactions in writing. The transactions are processed through the Automated Clearing House (ACH) Network. Organizations using the Network have formed an association, National Automated Clearinghouse Association. Extensive information about electronic transactions is available at that web site.
 
 
-##Why would anyone use an electronic transaction rather than just writing a check?
+## Why would anyone use an electronic transaction rather than just writing a check?
 
 Electronic transactions typically take less time to create and they cost less to send and they cost less to process. For example, when the State of Minnesota writes a warrant, or check, to pay a bill, the State must not only mail the warrant, but it must also pay the clearing bank a fee for processing the warrant. The average cost for processing a warrant is approximately 10.5 cents per item. By comparison, the average cost of processing an electronic, or ACH, transaction is approximately 5.7 cents per item. This can amount to a lot of money when you consider that the State issues millions of warrants each year.
 
