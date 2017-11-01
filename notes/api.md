@@ -12,7 +12,7 @@ request:
 
 ```
 method: POST (CREATE)
-uri: http://server/task/create?label={label}&due_date={due_date}&priorities={priorities}
+uri: http://server/todo/create?label={label}&due_date={due_date}&priorities={priorities}
 ```
 
 response: 
@@ -21,7 +21,7 @@ response:
 HTTP: 200
 {
     "status": "00",
-    "desdccription": "success",
+    "description": "success",
     "task_id":{task_id}
 }
 ```
@@ -33,7 +33,7 @@ request:
 
 ```
 method: DELETE (DELETE)
-uri: http://server/task/delete/{task_id}
+uri: http://server/todo/delete/{task_id}
 ```
 
 response:
@@ -42,7 +42,7 @@ response:
 HTTP: 200
 {
     "status": "00",
-    "desdccription": "success"
+    "description": "success"
 }
 ```
 
@@ -53,7 +53,7 @@ request:
 
 ```
 method: PUT (UPDATE)
-uri: http://server/task/marked/{task_id}
+uri: http://server/todo/marked/{task_id}
 ```
 
 response:
@@ -62,7 +62,7 @@ response:
 HTTP: 200
 {
     "status": "00",
-    "desdccription": "success",
+    "description": "success",
     "task_id":{task_id}
 }
 
@@ -75,8 +75,8 @@ request:
 
 ```
 method: GET (READ)
-1. uri: http://server/task/search/{id}
-2. uri: http://server/task/search?label={label}&due_date={due_date}&&priorities={priorities}
+1. uri: http://server/todo/search/{id}
+2. uri: http://server/todo/search?label={label}&due_date={due_date}&&priorities={priorities}
 ```
 
 response:
@@ -85,7 +85,7 @@ response:
 HTTP: 200
 {
     "status": "00",
-    "desscription": "success",
+    "description": "success",
     "tasks : [
     	{
            "task_id":{task_id},
