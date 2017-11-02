@@ -1,0 +1,74 @@
+<serviceRequest>
+  <xsdLocation>/schema/epay.eai.xsd</xsdLocation>
+  <header>
+    <projectName>EPAY</projectName>
+    <serviceName>ESSO</serviceName>
+    <functionName>CREATETXN</functionName>
+    <requestDate>2017-11-02</requestDate>
+    <requestTime>18:14:55</requestTime>
+    <requestId>PlHxxgzRWbfmkWR9tDnc3w1</requestId>
+    <requesterSession>PlHxxgzRWbfmkWR9tDnc3w1</requesterSession>
+    <providerSession>PlHxxgzRWbfmkWR9tDnc3w1</providerSession>
+    <msgId></msgId>
+    <correlId></correlId>
+    <eai>
+      <resultQueue></resultQueue>
+    </eai>
+  </header>
+  <body>
+    <transaction>
+      <currExp>-2</currExp>
+    </transaction>
+    <orderNo>201711020000016</orderNo>
+    <merchantNumber>950081083</merchantNumber>
+    <amount>25.25</amount>
+    <currencyId>764</currencyId>
+    <paymentId>3</paymentId>
+    <transId>023425</transId>
+    <ref1>10001614470000000</ref1>
+    <ref2>052560000100004</ref2>
+    <ref3></ref3>
+    <ref4></ref4>
+    <ref5></ref5>
+    <supplierCode>SSO</supplierCode>
+    <dealerCode>RATCHADA</dealerCode>
+    <effectiveDate>2017-11-02</effectiveDate>
+  </body>
+</serviceRequest>
+
+
+<serviceResponse>
+	<header>
+		<projectName>EPAY</projectName>
+		<serviceName>ESSO</serviceName>
+		<functionName>CREATETXN</functionName>
+		<requestDate>2017-11-02</requestDate>
+		<requestTime>18:14:55</requestTime>
+		<requestId>PlHxxgzRWbfmkWR9tDnc3w1</requestId>
+		<requesterSession>PlHxxgzRWbfmkWR9tDnc3w1</requesterSession>
+		<providerSession>PlHxxgzRWbfmkWR9tDnc3w1</providerSession>
+		<msgId></msgId>
+		<correlId>EAIMBP3|EPAY|ESSO|CREATETXN|2017-11-02</correlId>
+	</header>
+	<body>
+		<merchantNumber>950081083</merchantNumber>
+		<orderNumber>201711020000016</orderNumber>
+		<amount>25.25</amount>
+		<transaction>
+			<currExp>-2</currExp>
+		</transaction>
+		<paymentId>3</paymentId>
+		<transId>023425</transId>
+		<ref1>10001614470000000</ref1>
+		<ref2>052560000100004</ref2>
+		<ref3/>
+		<ref4/>
+		<ref5/>
+		<responseCode>00</responseCode>
+		<responseDesc>00 - Successful</responseDesc>
+		<responseDate>2017-11-02</responseDate>
+		<responseTime>18:14:56.017255</responseTime>
+	</body>
+</serviceResponse>
+
+
