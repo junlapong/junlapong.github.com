@@ -62,7 +62,7 @@ Notes
 
 - [Blockchain คืออะไร?](https://nuuneoi.com/blog/blog.php?read_id=900)
 - [Blockchain เบื้องหลังการทำงาน ตัวอย่างจาก Bitcoin](https://nuuneoi.com/blog/blog.php?read_id=901) ***
-- [การสมัคร บัญชี Bitcoin](http://mmmsosara.blogspot.com/2016/02/bitcoins_69.html) ([bx.in.th](https://bx.in.th/) | [coins.co.th](https://coins.co.th))
+- [การสมัคร บัญชี Bitcoin](http://mmmsosara.blogspot.com/2016/02/bitcoins_69.html) ([bx.in.th](https://bx.in.th/), [coins.co.th](https://coins.co.th))
 - [OmiseGo คืออะไร](https://goo.gl/tNenwa)
 - [รวบรวมเรื่องราวในวงการ Bitcoin [2008-2017]](https://goo.gl/aXsVQh)
 
