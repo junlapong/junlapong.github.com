@@ -66,7 +66,6 @@ var debugging = require(packageName, "hbscript");
  - E4X
 
 
-
 ### HTTP Request
  - http://172.19.4.66:2161/hbutils/st-index.html
 
@@ -78,7 +77,7 @@ var debugging = require(packageName, "hbscript");
  - `HB.request.http.data;`
  - http://172.19.4.66:2161/hbscript/jun_debugging?debug=on
 
-```
+```xml
 <getProduct>
      <cis>20</cis>
      <type>XML</type>
@@ -88,37 +87,21 @@ var debugging = require(packageName, "hbscript");
 ### Convert Copybook to hbx
 
 
-
-
 ## Day 4 (2017-08-10)
 
-TSO4
-user: byit2us
-pass: t@kjly17
-
-
-
-
-
 user: byit2co
-pass: 
-		
-
-
+pass: b@ymmmYY
 
 App => KISS
 Terminal => CICS
 
 [Comand]
-
+```
 log acicterm
 
 [Pause Break] => clear screen
 
 cesn [Enter]
 
-
 RMLP [tranid]
-
-
-
+```

@@ -15,11 +15,10 @@ uri: http://server/todo/create
 
 request:
 
-```
-Content-Type: application/json
-```
-
 ```json
+POST /todo/create
+Content-Type: application/json
+
 {
 	"label": {label},
     "due_date": {due_date},
@@ -30,7 +29,8 @@ Content-Type: application/json
 response: 
 
 ```json
-HTTP: 200
+HTTP Status Code: 200
+
 {
     "status": "00",
     "description": "success",
@@ -92,12 +92,26 @@ HTTP: 200
 4. search
 ----------
 
+```
+method: POST
+uri: http://server/todo/search 
+```
+
 request:
 
-```
-method: GET (READ)
-1. uri: http://server/todo/search/{id}
-2. uri: http://server/todo/search?label={label}&due_date={due_date}&&priorities={priorities}
+```json
+[
+	{
+		"label": {label1},
+	    "due_date": {due_date1},
+	    "priorities": {priorities1},
+	},
+	{
+		"label": {label2},
+	    "due_date": {due_date2},
+	    "priorities": {priorities2},
+	}
+]
 ```
 
 response:
@@ -141,6 +155,13 @@ HTTP: 200
            }
        }
        ]
+    },
+    "pagination" : {
+        "prev": "/prev",
+        "next": "
+    	
+    }
+    	 
     },
     "_links": {
         "create": "/todo/create"
