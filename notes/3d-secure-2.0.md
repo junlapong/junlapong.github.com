@@ -6,7 +6,7 @@
 
 By  Siew Nee Yeo
 
-
+![](https://junlapong.github.io/notes/media/3ds-2.0.png)
 
 ## Section 1
 
@@ -52,6 +52,7 @@ by  Luke Parr
 
 
 ### Video
+- [Destination 3-D Secure 2.0](https://youtu.be/P_C2JzbRaI8)
 - [Webinar EMV 3-D Secure 2.0: Second Time's the Charm?](https://youtu.be/B9ReYBC3p2k)
 - [3D Secure](https://youtu.be/B9ReYBC3p2k)
 - [Implementing EMV 3DS 2.0 - Compliant Solutions into a Mobile Device or Merchant App](https://youtu.be/S3YTLTJGisw)
