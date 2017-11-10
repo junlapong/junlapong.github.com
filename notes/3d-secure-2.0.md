@@ -6,7 +6,7 @@
 
 By  Siew Nee Yeo
 
-![](https://junlapong.github.io/notes/media/3ds-2.0.png)
+![](https://raw.githubusercontent.com/junlapong/junlapong.github.io/master/notes/media/3ds-2.0.png)
 
 ## Section 1
 
@@ -25,6 +25,16 @@ by  Luke Parr
 by  Luke Parr
 
 ### Authentication Flows, and examples
+
+#### Changes in flows
+
+The biggest difference since 3DS 1.0 is the **Frictionless flow** which allows issuer to approve a transaction without cardholder interaction based on risk-based-authentication performed in the ACS. (Steps 1-4 at the figure below)
+
+![](http://www.modirum.com/files/2017/05/3ds20.png)
+
+**Challenge flow** has got changed way of communication from the Issuer to Merchant. In 3DS 2.0 the result of challenge is communicated through the DS. (Step 6 at the figure below) Thus, Merchant is informed about the authentication results via a separate channel, which is more secure.
+
+![](http://www.modirum.com/files/2017/05/3ds20-challenge.png)
 
 ### 3-D Secure SDK Specification
 
