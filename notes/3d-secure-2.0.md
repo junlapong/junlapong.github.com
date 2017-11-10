@@ -32,7 +32,9 @@ The biggest difference since 3DS 1.0 is the **Frictionless flow** which allows i
 
 ![](http://www.modirum.com/files/2017/05/3ds20.png)
 
-**Challenge flow** has got changed way of communication from the Issuer to Merchant. In 3DS 2.0 the result of challenge is communicated through the DS. (Step 6 at the figure below) Thus, Merchant is informed about the authentication results via a separate channel, which is more secure.
+#### Challenge flow
+
+Challenge flow** has got changed way of communication from the Issuer to Merchant. In 3DS 2.0 the result of challenge is communicated through the DS. (Step 6 at the figure below) Thus, Merchant is informed about the authentication results via a separate channel, which is more secure.
 
 ![](http://www.modirum.com/files/2017/05/3ds20-challenge.png)
 
@@ -71,6 +73,7 @@ The biggest difference since 3DS 1.0 is the **Frictionless flow** which allows i
 - *** [Destination 3-D Secure 2.0](https://youtu.be/P_C2JzbRaI8)
 - *** [Payment Security: Payment Protection without Friction](https://youtu.be/PpBCNFOoXEk)
 - [Webinar EMV 3-D Secure 2.0: Second Time's the Charm?](https://youtu.be/B9ReYBC3p2k)
+- [3D Secure 2 0: How Card Issuers Can Prepare](https://youtu.be/5H-nQfVmZUU)
 - [Implementing EMV 3DS 2.0 - Compliant Solutions into a Mobile Device or Merchant App](https://youtu.be/S3YTLTJGisw)
 - [3D Secure 1.0](https://youtu.be/B9ReYBC3p2k)
 
