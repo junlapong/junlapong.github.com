@@ -34,7 +34,7 @@ The biggest difference since 3DS 1.0 is the **Frictionless flow** which allows i
 
 #### Challenge flow
 
-Challenge flow** has got changed way of communication from the Issuer to Merchant. In 3DS 2.0 the result of challenge is communicated through the DS. (Step 6 at the figure below) Thus, Merchant is informed about the authentication results via a separate channel, which is more secure.
+**Challenge flow** has got changed way of communication from the Issuer to Merchant. In 3DS 2.0 the result of challenge is communicated through the DS. (Step 6 at the figure below) Thus, Merchant is informed about the authentication results via a separate channel, which is more secure.
 
 ![](http://www.modirum.com/files/2017/05/3ds20-challenge.png)
 
