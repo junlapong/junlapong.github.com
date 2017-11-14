@@ -27,8 +27,7 @@ Fraudsters typically run their fraudulent transactions from the same computer sy
 
 ThreatMetrix, our partner for device fingerprinting, uses “deep packet tracing” which uses information in the packets to detect risky device behavior like botnet activity, firewall scanning, spamming, etc., to trace the packets back to the originating system.  This means that even if a fraudster takes control of someone else's computer remotely (known as creating a zombie machine) and puts an order through, we can get information about the fraudster's system and use that to detect the fraudulent activity. If the fraudster moves to a different zombie machine, Decision Manager will still be able to identify the fraudulent activity by evaluating the true IP through its device fingerprint.
 
-![](https://support.cybersource.com/library/KB/CYBERSOURCE/devicefingerprint.jpg)
-
+![](https://raw.githubusercontent.com/junlapong/junlapong.github.io/master/notes/media/devicefingerprint.jpg)
 
 ## What is the On-Demand Single Transaction Query?
 
