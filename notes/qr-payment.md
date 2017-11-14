@@ -15,10 +15,11 @@
 - [Merchant-Presented Mode (PDF)](https://www.emvco.com/wp-content/uploads/documents/EMVCo-Merchant-Presented-QR-Specification-v1_0.pdf)
 - [Consumer Presented Mode (PDF)](https://www.emvco.com/wp-content/uploads/documents/EMVCo-Consumer-Presented-QR-Specification-v1.pdf)
 
-### Dev QR Generator
+### Dev Resource
 
-- [https://promptpay-qr.firebaseapp.com](https://promptpay-qr.firebaseapp.com/) | [github](https://github.com/dtinth/promptpay-qr)
+- [promptpay2.me](https://promptpay-qr.firebaseapp.com/) | [github](https://github.com/dtinth/promptpay-qr)
 - [PHP Library to generate QR Code payload for PromptPay](https://github.com/kittinan/php-promptpay-qr)
+- [Android PromptPay QR-Code Generator](https://github.com/diewland/promptpay-qr-plus)
 - [https://qr-generator.digio.co.th](https://qr-generator.digio.co.th/)
 
 ## FAQ
@@ -39,6 +40,8 @@
 ### 2017-11-13
 
 - [ธปท.อนุญาต 5 ธนาคาร ให้บริการ QR Code เป็นการทั่วไปแล้ว](https://goo.gl/L8v3nr)
+
+- [K Plus Shop เชื่อมระบบ PromptPay แล้ว เป็นเลข PromptPay แรกที่ไม่ใช่เบอร์โทรและเลขบัตรประชาชน](https://www.blognone.com/node/97186)
 
 ### 2017-11-14
 
