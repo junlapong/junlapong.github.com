@@ -3,14 +3,13 @@
 ## Features
 
 - Credit & Debit Card
-  - 3-D Secure
+  - Support of all known txn types i.e sale, preauth, capture, void, refund, recurring, installments etc
+  - MPI (support 3-D Secure 2.0)
   - Payment Tokenization
-  - Recurring
-  - Installment
-  - MOTO
-  - Authorized, Settlemnt, Void, Refund
+  - Recurring & Installment
+  - Virtual Terminal
 - Direct Debit
-  - Intenet Banking (KOL, KBOL)
+  - Internet Banking (KOL, KBOL)
   - RTP
   - Escrow
   - e-SSO (new format)
@@ -19,9 +18,9 @@
 - API Inquiry Transaction Status
 - QR Payment
 - Realtime Fraud Detection
-- Merchabt Admin
+- Merchant Admin
 - BAY Admin
-- KQT (Krungsri Quick Transafer)
+- KQT (Krungsri Quick Transfer)
 - Mobile App SDK
 - Plugin for e-Commerce Platform
 
@@ -30,7 +29,7 @@
 ### Security
 - Fully Encryption API
 
-- PCI-DSS
+- Comply PCI-DSS 3.2
 
 ### Architecture
 
