@@ -7,9 +7,15 @@
     <title>Krungsri e-Payment</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
     <link href="img/favicon.ico" type="image/x-icon" rel="icon"/>
+    <style>
+       #txtotp {
+          -webkit-text-security: disc;
+       }
+    </style>
     
   </head>
   <body>
@@ -341,7 +347,7 @@
 
                       <div class="item col-xs-12 col-sm-12 col-lg-12">
                         <div class="inner">
-                          <input type="text" maxlength="6" id="txtotp" class="BizFormFill WatermarkText" autocomplete="off"/>
+                          <input type="number" pattern="\d" maxlength="6" id="txtotp" class="BizFormFill WatermarkText" autocomplete="off"/>
                           <div id="lblotp" class="textPlaceholder">OTP Code</div>
                         </div>
                       </div>
@@ -612,7 +618,7 @@
       </section>
     </div>
 
-    <div class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="col-sm-12 col-xs-12" style="text-align:center;">
           <div>
@@ -626,6 +632,7 @@
         </div>
       </div>
     </div>
+    
 	
     <!--
     <div class="container-fluid _bgYellow"></div>
