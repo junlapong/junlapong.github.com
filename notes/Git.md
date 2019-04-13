@@ -8,9 +8,14 @@ Git Notes
 
 
 ## Checkout Git Sub Directory
+
+update the github URL and replace `/tree/master` with `'/trunk'`
+
 ```
 svn ls https://github.com/spotify/apollo/trunk/examples
 svn checkout https://github.com/spotify/apollo/trunk/examples
+svn export https://github.com/junlapong/spark-template-engines/trunk/spark-template-thymeleaf
+
 ```
 
 
