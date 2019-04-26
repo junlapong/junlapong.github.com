@@ -15,7 +15,7 @@ pkg install termux-api
 termux-clipboard-get
 ```
 
-### 3. set alias as pcopy
+### 3. set alias as pbcopy
 
 ```
 cd ~
