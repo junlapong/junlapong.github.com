@@ -6,7 +6,7 @@ An Overview of Payment Security
 08.30 AM - 01.00PM 28 June 2018
 b @[Napalai room, 2nd floor, Dusit Thani, Bangkok](https://maps.google.com/maps?hl=en&q=Napalai%20room%2C%202nd%20floor%2C%20Dusit%20Thani%2C%20Bangkok)
 
-##1. Cyber Crime And Online Fraud
+## 1. Cyber Crime And Online Fraud
 
 By Mr. Sunpet Sangnetswang
 By Mr. Ati Arpitaechaphan
@@ -14,7 +14,7 @@ By Mr. Ati Arpitaechaphan
 - AMLO Analysis
 
 
-##2. 3-D Secure 2.0 Future Roadmap
+## 2. 3-D Secure 2.0 Future Roadmap
 
 By Mr. Em re Durusut from MasterCard
 
@@ -24,7 +24,7 @@ By Mr. Em re Durusut from MasterCard
 ### 4. Roadmap and Timeline
 
 
-##3. 2C2P'S 3-D Secure 2.0 Readniess
+## 3. 2C2P'S 3-D Secure 2.0 Readniess
 
 By Mr. Aung Kyaw Moe
 
@@ -39,4 +39,4 @@ By Mr. Aung Kyaw Moe
 
 - Improve customer experience => Reduce transaction time
 - Reduce drop transaction => Increase approved transaction
--  
+ 
