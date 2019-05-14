@@ -32,6 +32,8 @@ brew install tmux
 - ctrl-b :set synchronize-panes off ปิดการ sync panes
 - ctrl-b :kill-server ออกจาก session และปิด tmux server 
 
+[![asciicast](https://asciinema.org/a/246048.svg)](https://asciinema.org/a/246048)
+
 ## Config
 
 `~/.tmux.conf`
@@ -43,8 +45,15 @@ unbind '"'
 bind | split-window -h
 bind - split-window -v
 
+# Toggle sending keystrokes to all panes in a window
+bind x setw synchronize-panes
+
 # Make mouse useful in copy mode
 set -g mouse on
+
+# Toggle Synchronize Panes
+bind e setw synchronize-panes
+
 ```
 
 ## Reference:
