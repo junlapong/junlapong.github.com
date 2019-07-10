@@ -49,7 +49,7 @@
 
 	nginx -t
 
-หาก config ไม่มีปัญหา เราสามารถสั่งให้ nginx reload configuation ใหม่ดังนี้
+หาก config ไม่มีปัญหา เราสามารถสั่งให้ nginx reload configuration ใหม่ดังนี้
 
 	nginx -s reload
 
@@ -116,7 +116,7 @@ to be continued
 
 ### TL;DR
 
-dowload [nginx 1.17.0](http://nginx-win.ecsds.eu/download/nginx%201.17.0.1%20Crow.zip) และ extract ไปไว้ที่ C:\nginx
+download [nginx 1.17.0](http://nginx-win.ecsds.eu/download/nginx%201.17.0.1%20Crow.zip) และ extract ไปไว้ที่ C:\nginx
 
 	C:\> cd C:\nginx
 	C:\> nginx.exe
