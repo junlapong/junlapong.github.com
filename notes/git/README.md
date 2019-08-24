@@ -282,3 +282,24 @@ ref: https://stackoverflow.com/questions/1783405/how-do-i-check-out-a-remote-git
 or the shorthand
 
 	git checkout -t <remote_name>/<branch_name>
+
+### How to remove local untracked files from the current Git branch
+
+ref: https://koukia.ca/how-to-remove-local-untracked-files-from-the-current-git-branch-571c6ce9b6b1
+
+Well, the short answer as per the Git Documents is git clean
+If you want to see which files will be deleted you can use the -n option before you run the actual command:
+
+	git clean -n
+
+Then when you are comfortable (because it will delete the files for real!) use the -f option:
+
+	git clean -f
+
+Here are some more options for you to delete directories, files, ignored and non-ignored files
+
+- To remove directories, run git clean -f -d or git clean -fd
+- To remove ignored files, run git clean -f -X or git clean -fX
+- To remove ignored and non-ignored files, run git clean -f -x or git clean -fx
+
+Note the case difference on the X for the two latter commands.
