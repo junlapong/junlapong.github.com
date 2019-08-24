@@ -224,7 +224,6 @@ ex.
 
 	git push -u origin master
 	git push origin dev
-	
 
 ### branch
 
@@ -240,7 +239,46 @@ delete a remote branch
 	
 	git push <remote_name> --delete <branch_name>
 	git push origin -d dev
-	
+
+list branch
+
+	git branch -a
+
 switch branch
 
 	git checkout dev
+
+### Sync your Git Fork to the Original Repo
+
+https://digitaldrummerj.me/git-syncing-fork-with-original-repo/
+
+	$ git remote add upstream https://github.com/<uername>/<original-repository>.git
+	$ git fetch upstream
+	$ git checkout master
+	$ git merge upstream/master
+	$ git push
+
+### Working with submodules
+
+https://github.blog/2016-02-01-working-with-submodules/
+
+	git submodule add https://github.com/<username>/repo submodule
+
+### Joining a project using submodules
+
+	git clone --recursive <project url>
+
+### Clone Single Branch
+
+	git clone --single-branch --branch <branch_name> https://github.com/<uername>/<repository>.git
+
+
+### Checkout Remote Branch
+
+ref: https://stackoverflow.com/questions/1783405/how-do-i-check-out-a-remote-git-branch
+
+	git checkout -b branch_name <remote_name>/branch_name
+
+or the shorthand
+
+	git checkout -t <remote_name>/<branch_name>
