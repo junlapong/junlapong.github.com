@@ -20,17 +20,18 @@ brew install tmux
 
 - ctrl-b d ให้ tmux detach session
 - ctrl-b c สร้าง window ใหม่
+- ctrl-b : เข้าสู่ prompt รอคำสั่ง
 - ctrl-b :rename-window <window_name> ตั้งชื่อ window
 - ctrl-b w ดูรายการ windows
 - ctrl-b & ลบ windows ที่อยู่ปัจจุบัน
-- ctrl-b % แยก pane ไปทางขวา
-- ctrl-b " แยก pane ไปข้างล่าง
+- ctrl-b | แยก pane ไปทางขวา
+- ctrl-b - แยก pane ไปข้างล่าง
 - ctrl-b ลูกศร ซ้ายขวาบนล่าง เลือก pane ไปตามทิศทางลูกศร
 - ctrl-b t แสดงเวลา
-- ctrl-b :set mouse ใช้ mouse คลิกแต่ละ pane ได้
-- ctrl-b :set synchronize-panes พิมพ์ทีเดียวได้ทุก panes ใน window
-- ctrl-b :set synchronize-panes off ปิดการ sync panes
-- ctrl-b :kill-server ออกจาก session และปิด tmux server 
+- ctrl-b x toggle synchronize-panes พิมพ์ทีเดียวได้ทุก panes
+- ctrl-b :kill-server ออกจาก session และปิด tmux server
+
+see [tmux-cheatsheet](./tmux-cheatsheet.md)
 
 [![asciicast](https://asciinema.org/a/246048.svg)](https://asciinema.org/a/246048)
 
@@ -50,10 +51,6 @@ bind x setw synchronize-panes
 
 # Make mouse useful in copy mode
 set -g mouse on
-
-# Toggle Synchronize Panes
-bind e setw synchronize-panes
-
 ```
 
 ## Reference:
