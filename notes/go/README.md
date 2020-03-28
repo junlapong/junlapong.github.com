@@ -18,7 +18,7 @@
 
 __macOS__
 
-```bash
+```
 $ brew install golang
 $ go version
 go version go1.14 darwin/amd64
