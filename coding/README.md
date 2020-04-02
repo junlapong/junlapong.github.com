@@ -14,7 +14,7 @@ __3 องค์ประกอบวิชาวิทยาการคำน�
 ## YouTube Channel
 
 - [Aksorn Nex Station](https://www.youtube.com/channel/UCrxVp6p_dT5KFQc1diooVFw)
-- [ครูน้ําฝน พาเพลิน](https://www.youtube.com/channel/UCKAYw8EbETOf0KtX6d5A6BQ/videos) - สื่อการสอน
+- [ครูน้ำฝน พาเพลิน](https://www.youtube.com/channel/UCKAYw8EbETOf0KtX6d5A6BQ/videos) - สื่อการสอน
 
 ## บทเรียน
 
