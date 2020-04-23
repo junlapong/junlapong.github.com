@@ -10,7 +10,7 @@ https://vuejs.org
 - Yarn
 
 ```
-	npm install -g yarn
+npm install -g yarn
 ```
 
 ## Installation
@@ -18,7 +18,7 @@ https://vuejs.org
 ### Vue CLI
 
 ```
-	npm install -g @vue/cli
+npm install -g @vue/cli
 ```
 
 ## New Project
@@ -30,6 +30,7 @@ vue create my-app
 cd my-app
 yarn serve
 ```
+
 ## Development
 
 ### Project Structure

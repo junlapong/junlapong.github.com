@@ -170,7 +170,7 @@ __EXAMPLES__
 โกยจาก branch_name ไปใส่ยัง branch master
 
 	git rebase master
-	
+
 
 ## Fork
 
@@ -208,6 +208,7 @@ __EXAMPLES__
 - [ว่าด้วยเรื่องของ git rebase และ git pull rebase](https://medium.com/@goangle/git-rebase-%E0%B9%81%E0%B8%A5%E0%B8%B0-git-pull-rebase-%E0%B8%97%E0%B8%B3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%8A%E0%B8%B4%E0%B8%99-b08787c44246)
 - [มาเรียนรู้ Git แบบง่ายๆกันเถอะ](https://blog.nextzy.me/%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%B9%E0%B9%89-git-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-427398e62f82) *** ยาววว
 - [Git คืออะไร … Git is your friend](https://medium.com/@pakin/git-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-git-is-your-friend-c609c5f8efea)
+- [🌳🚀 CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1)
 
 
 ## short cut
@@ -221,7 +222,7 @@ ex.
 	
 	git pulll origin master
 	git pulll origin dev
-
+	
 	git push -u origin master
 	git push origin dev
 
@@ -230,7 +231,7 @@ ex.
 create new branch, copy from current branch and switch to new branch
 	
 	git checkout -b <branch_name>
-	
+
 delete branch
 
 	git branch -d dev
@@ -283,7 +284,8 @@ or the shorthand
 
 	git checkout -t <remote_name>/<branch_name>
 
-### How to remove local untracked files from the current Git branch
+
+### Remove local untracked files from the current Git branch
 
 ref: https://koukia.ca/how-to-remove-local-untracked-files-from-the-current-git-branch-571c6ce9b6b1
 
@@ -303,3 +305,9 @@ Here are some more options for you to delete directories, files, ignored and non
 - To remove ignored and non-ignored files, run git clean -f -x or git clean -fx
 
 Note the case difference on the X for the two latter commands.
+
+
+### Reset local repository branch to be just like remote repository HEAD
+
+	git fetch origin
+	git reset --hard origin/master
