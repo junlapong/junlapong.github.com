@@ -26,3 +26,9 @@ mongo
 ```
 
 ref: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+
+## Installing Robo 3T (Robomongo) 
+
+```
+brew cask install robo-3t
+```

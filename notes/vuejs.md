@@ -74,4 +74,3 @@ yarn add v-calendar@next
 ## Notes
 
 - [Extensions ดี๊ดีบน VS Code แนะนำสำหรับ Vue.js Developer](https://link.medium.com/hMwpwZtKU5)
-
