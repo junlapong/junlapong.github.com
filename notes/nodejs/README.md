@@ -16,6 +16,7 @@ brew install node
 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+nvm install v12.16.1
 ```
 
 ### Check Version
@@ -34,3 +35,19 @@ npm -v
 npm install -g yarn
 ```
 
+## Notes
+
+- [How to fix: node-gyp rebuild fail; No Xcode or CLT version detected](https://link.medium.com/3GO4FKHdZ3)
+
+`gyp: No Xcode or CLT version detected!`
+
+```sh
+# step 1
+xcode-select --print-path
+
+# step 2
+sudo rm -r -f /Library/Developer/CommandLineTools
+
+# step 3
+xcode-select --install
+```
