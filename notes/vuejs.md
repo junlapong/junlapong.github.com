@@ -58,6 +58,11 @@ yarn serve
 - [สอน VueJS / NuxtJS วีดีโอ ตั้งแต่เตรียมเครื่อง ยันเขียนเป็น](https://dev.to/sakko/vuejs-nuxtjs-571o)
 - [สอนเขียน VueJS (ทยอยลง Step-by-Step)](https://www.youtube.com/playlist?list=PLjPfp4Ph3gBry3sJDNrbqor5ikjwGDJ_7)
 
+### Articles
+
+- [หัดเขียน Vue.js เล่นๆ EP.1](https://link.medium.com/Dp9Xqq3fW5)
+- [หัดเขียน Vue.js เล่นๆ EP.2](https://link.medium.com/mvbk1d5fW5)
+
 ## Build for Production
 
 ```
