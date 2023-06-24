@@ -18,11 +18,11 @@ __EXAMPLES__
 
 ## Clone
 
-สมมุติว่ามี repository แห่งนีงใน GitHub เช่น https://github.com/uername/project
+สมมุติว่ามี repository แห่งนึงใน GitHub เช่น `https://github.com/username/project`
 
 เวลาเราจะใช้โค้ดใน repository นี้ เรา `clone`
 
-	git clone https://github.com/uername/project
+	git clone https://github.com/username/project
 
 ### Clone vs Checkout
 
@@ -161,17 +161,6 @@ __EXAMPLES__
 	$ git pull
 	$ git stash pop
 
-## Rebase
-
-เปลี่ยนไปอยู่ที่ branch_name
-
-	git checkout branch_name
-
-โกยจาก branch_name ไปใส่ยัง branch master
-
-	git rebase master
-
-
 ## Fork
 
 Fork ไม่ใช่เรื่องของ Git โดยตรง แต่เป็นเรื่อง software development 
@@ -210,6 +199,7 @@ __EXAMPLES__
 - [Git คืออะไร … Git is your friend](https://medium.com/@pakin/git-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-git-is-your-friend-c609c5f8efea)
 - [🌳🚀 CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1)
 
+---
 
 ## short cut
 
